@@ -1,0 +1,519 @@
+:root {
+	--maincolor:#4bb84d;
+}
+* {
+	font-family: 'Poppins', sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+	background: #1a0a0b !important;
+  color: #fff;
+}
+img {max-width: 100%;}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.btn-header {
+  background: linear-gradient(#dfbd51, #c68408);
+  border-radius: 50%;
+  border: 0;
+  width: 45px;
+  height: 45px;
+}
+.btn-header i {
+  color: #4e300f;
+  font-size: 22px;
+}
+.teenpattitablegame {
+  background: url('../img/teenpattitable.png') no-repeat;
+  background-size: cover;
+  height: 630px;
+}
+.bootpoint {
+  background: #310709;
+  padding: 15px 30px;
+}
+.bootpoint li {
+  width: 100%;
+  float: left;
+  margin-bottom: 18px;
+}
+.bootpoint li:last-child {
+  margin-bottom: 0;
+}
+.bootpointtext {
+  background: #0a0102;
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+  padding: 15px 5px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px #3e2e30;
+  padding-left: 45px;
+}
+.bootpoint::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 67px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background: linear-gradient(transparent, #ac9798, transparent);
+  border-radius: 6px;
+}
+.bootpoint:first-child::before {
+  display: none;
+}
+.chat-fix {
+  bottom: 15px;
+  left: 15px;
+}
+.teenpattiuser {
+  background: url('../img/profilebg.png') no-repeat;
+  border-radius: 5px;
+  position: absolute;
+  width: 100px;
+  left: 9%;
+  top: 30%;
+  padding: 13px;
+  background-size: cover;
+  height: 100px;
+}
+.teenpattiuser p {
+  background: #000;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  padding: 5px 2px;
+}
+.teenpattiuser2 {
+  bottom: 20%;
+  top: inherit;
+}
+.teenpattiuser3 {
+  bottom: 18%;
+  top: inherit;
+  left: 0;
+  right: 0;
+  margin: 0px auto;
+}
+.gamestarttime {
+  font-size: 22px;
+}
+.teenpattiuser i, .teenpattiuserDpoint {
+  border: 1px solid #ecc85d;
+  background: #4e0b06;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  bottom: -11px;
+  left: -12px;
+}
+.teenpattiuserDpoint {
+  bottom: auto;
+  top: -11px;
+  font-weight: 600;
+}
+.hardid, .hardid span {
+  color: #4eb323;
+  font-size: 14px;
+}
+.user-patti {
+  display: flex;
+  right: 0;
+  top: 0;
+}
+.user-patti img {
+  margin-left: -15px;
+  width: 28px;
+}
+.user-patti {
+  right: -46px;
+  top: 0px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.user-patti p {
+  background: transparent;
+}
+.user-patti p img {
+  width: 18px;
+}
+.pattirotate {
+  transform: rotate(-19deg);
+}
+.pattirotate-end {
+  transform: rotate(19deg);
+}
+.pattirotate-center {
+  position: relative;
+  z-index: 1;
+  margin-top: -6px;
+}
+.potpointgame {
+  top: 30%;
+}
+.setting-modal .modal-content {
+  background: linear-gradient(#3fa36f, #194328);
+}
+.pokerMenu-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.pokernav-item {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 0px;
+  transition: all .4s linear;
+}
+.settingpopup .pokernav-item {
+  padding: 8px 10px;
+}
+.switchToggle input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.switchToggle label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px;
+  max-width: 70px;
+  height: 25px;
+  background: #881817;
+  display: inline-block;
+  border-radius: 100px;
+  position: relative;
+  float: right;
+}
+.switchToggle input:checked + label {
+  background: #4bb84d;
+}
+.switchToggle input + label::before, .switchToggle input + input + label::before {
+  content: 'No';
+  position: absolute;
+  top: 2px;
+  left: 31px;
+  width: 21px;
+  height: 21px;
+  border-radius: 90px;
+  transition: 0.3s;
+  text-indent: 0;
+  color: #fff;
+  font-size: 14px;
+}
+.switchToggle label::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.switchToggle input:checked + label::before, .switchToggle input:checked + input + label::before {
+  content: 'Yes';
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  width: 21px;
+  height: 21px;
+  border-radius: 90px;
+  transition: 0.3s;
+  text-indent: 0;
+  color: #fff;
+}
+.switchToggle input:checked + label::after, .switchToggle input:checked + input + label::after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+.setting-modal .modal-header h5 {
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.setting-modal .modal-header {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #4e300f;
+}
+.pack-btn {
+  background: linear-gradient(#0049ae,#002957);
+  border: 3px solid #8b8c9a;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 6px 15px;
+  box-shadow: 0 0 9px #4981da;
+  min-height: 69px;
+}
+.pack-btn span {
+  font-size: 14px;
+}
+.plush-btn {
+  background: #027606 !important;
+  font-size: 30px;
+  padding: 0 8px;
+  width: 38px;
+  height: 38px;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #dab344;
+}
+.packblindiv .bootpoint {
+  background: transparent;
+}
+.packblindiv .bootpoint::before {
+  display: none;
+}
+.setting-modal .modal-header {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 3px solid #d6ce77;
+  background: linear-gradient(#45660b, #3a5c08);
+  box-shadow: 0 4px 6px #44650a;
+}
+.card-start {
+  margin-left: -28px;
+}
+.tablerankcard {
+  background: #12341c;
+  border: 1px solid #556138;
+}
+.tablerankcard {
+  padding-bottom: 5px;
+  padding-top: 4px;
+}
+.see-btn {
+  width: 90%;
+  z-index: 1;
+  background: linear-gradient(#0049ae,#002957);
+  border: 2px solid #8b8c9a;
+  font-size: 12px;
+  border-radius: 4px;
+  left: 0;
+  right: 0;
+  margin: 0px auto;
+  top: 7px;
+}
+.chatmodallist li {
+  background: #082010;
+  text-align: center;
+  display: block;
+  margin-bottom: 15px;
+  border: 1px solid #d6ce77;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 8px;
+  cursor: pointer;
+}
+.chatmodallist li:last-child {
+  margin-bottom: 0;
+}
+.setting-modal .modal-header h5 p {
+  font-size: 14px;
+  text-transform: initial;
+  font-weight: 400;
+}
+.chatModal-div .modal-dialog {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  max-width: 350px;
+}
+.teenpattitable-container {
+  max-width: 1140px;
+}
+.teenpattiuser-point {
+  position: absolute;
+  border: ;
+  bottom: 4px;
+  font-size: 12px !important;
+  left: 6px;
+  width: 88% !important;
+  right: 0;
+  margin: 0px auto;
+  padding: 1px !important;
+  border-radius: 0px 0 7px 7px;
+}
+.teenpattiuser3 .user-patti img {
+  width: 35px;
+}
+.teenpattiuser3 .user-patti p.mb-4 img {
+  margin-left: 0;
+  width: 18px;
+}
+.teenpattiuser3 .user-patti {
+  right: -95px;
+}
+.fixpoint {
+  font-size: 14px;
+}
+
+
+
+
+
+@media (max-width: 1120px) {
+  .teenpattitablegame {
+  height: 515px;
+  background-position: center;
+}
+.teenpattitable-container {
+  max-width: 900px;
+}
+
+}
+
+@media (min-width: 767px) {
+  .teenpattitable-container {
+  margin-top: -120px;
+}
+
+}
+
+
+
+
+/* ---------------------Teen Patti lobby css---------------------------- */
+
+
+.teenpattiprofile {
+  background: url('../img/profilebg.png') no-repeat;
+    background-size: auto;
+  background-size: cover;
+  padding: 5px;
+  width: 82px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.teenpatti-lobby {
+  background: url('../img/bg.png') no-repeat !important;
+  color: #fff;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-position: center;
+  background-position: center !important;
+  background-size: cover !important;
+  min-height: 100vh;
+  position: relative;
+}
+.lobby-title span {
+  color: #ffd74b;
+  font-weight: 600;
+  font-size: 35px;
+  position: relative;
+}
+.lobby-title span::before, .lobby-title span::after {
+  content: "";
+  display: block;
+  width: 67px;
+  height: 2px;
+  background: linear-gradient(to left, transparent, #ffd74b, transparent);
+  top: 51%;
+  position: absolute;
+  left: -52%;
+}
+.lobby-title span::after {
+  right: -52%;
+  left: auto;
+}
+.lobbybetpoint img {
+  width: 140px;
+}
+.userlobbypoint, .usernumber-lobby {
+  position: absolute;
+  color: #000;
+  left: 0;
+  right: 0;
+  margin: 0px auto;
+  top: 22%;
+  z-index: 1;
+  text-align: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+.usernumber-lobby i {
+  color: #f6e72c;
+}
+.usernumber-lobby {
+  top: 43%;
+  color: #f6e72c;
+  font-weight: 600;
+}
+.buyinlobbybtn {
+  position: absolute;
+  bottom: 4px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+}
+.buyinpointlobby {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #000;
+  z-index: 1;
+  bottom: 19px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.playerfixBtn p {
+  color: #83690c;
+  font-weight: 600;
+}
+.playerfixBtn p span {
+  color: #228324;
+}
+.privatetable-btn {
+  background: #552f0b;
+  border: 2px solid #dcbd7d;
+  border-radius: 6px;
+  padding: 2px 18px;
+  font-weight: 600;
+}
+.tipdealerimg {
+  width: 100px;
+  top: 8%;
+  left: 3%;
+  right: 0;
+  margin: 0px auto;
+}
+.teenpattigamecoin {
+  left: 18px;
+  top: 5px;
+  width: 85px;
+}
+
+/* ---------------------Teen Patti lobby css End!---------------------------- */
+
+

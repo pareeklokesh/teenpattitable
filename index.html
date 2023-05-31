@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Teen Patti</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/Fontawsome/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="w-100 overflow-hidden">
+	<div class="teenpatti-header container-fluid py-3">
+	<div class="row justify-content-between">
+		<div class="w-auto d-flex align-items-center">
+			<button class="btn btn-header me-3">
+				<img src="assets/img/back.png" />
+			</button>
+			<button class="btn btn-header me-3">
+				<i class="fa-solid fa-info"></i>
+			</button>
+			<p class="hardid mb-0">Hard ID: 4754105<span class="d-block">Max Player: 5</span></p>
+	</div>
+		<div class="w-auto">
+		 	<button class="btn btn-header me-3 p-0" data-bs-toggle="modal" data-bs-target="#tableinformation">
+				<img src="assets/img/theme.png" width="28" />
+			</button>
+			<button class="btn btn-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				<i class="fa-solid fa-gear"></i>
+			</button>
+		</div>
+</div>
+</div>
+
+<div class="container-fluid">
+	<div class="container teenpattitable-container">
+		<div class="teenpattitablegame w-100 position-relative d-flex align-items-center justify-content-center position-relative">
+			<img src="assets/img/tipdealer.png" class="tipdealerimg position-absolute" />
+			<p class="gamestarttime">Game will start in 6</p>
+			<div class="position-absolute potpointgame landscape-block">
+					<p class="position-relative mb-0"><img src="assets/img/pot.png" width="50">0.00</p>
+				</div>
+			<div class="teenpattiuser text-center">
+				<img src="assets/img/man.png" />
+				<p class="mb-0 teenpattiuser-point">478599867</p>
+				<i class="fa-solid fa-gift position-absolute"></i>
+				<div class="user-patti position-absolute">
+					<div class="w-100">
+						<p class="userblind mb-0 text-center ps-2">Blind</p>
+					<div class="d-flex">
+					<img src="assets/img/backcards.png" class="m-0">
+					<img src="assets/img/backcards.png" class="">
+					<img src="assets/img/backcards.png" class="">
+				</div>
+					<p class="mb-0 mt-2 d-flex justify-content-center align-items-center w-100 p-0"><img class="m-0" src="assets/img/chips.png" width="12">&nbsp;2</p>
+				</div>
+				</div>
+			</div>
+			<div class="teenpattiuser teenpattiuser2 text-center">
+				<img src="assets/img/man.png" />
+				<p class="mb-0 teenpattiuser-point">478599867</p>
+				<i class="fa-solid fa-gift position-absolute"></i>
+				<div class="user-patti position-absolute">
+					<div class="w-100">
+					<p class="mb-2 mt-0 d-flex justify-content-center align-items-center w-100 p-0"><img class="m-0" src="assets/img/chips.png" width="12">&nbsp;2</p>
+					<div class="d-flex">
+					<img src="assets/img/backcards.png" class="m-0">
+					<img src="assets/img/backcards.png" class="">
+					<img src="assets/img/backcards.png" class="">
+				</div>
+				<p class="userblind mb-0 text-center ps-2">Blind</p>
+				</div>
+				</div>
+			</div>
+			<div class="teenpattiuser teenpattiuser3 text-center">
+				<img src="assets/img/man.png" />
+				<p class="mb-0 teenpattiuser-point">478599867</p>
+				<i class="fa-solid fa-gift position-absolute"></i>
+				<div class="teenpattiuserDpoint position-absolute">D</div>
+				<div class="user-patti position-absolute">
+					<p class="mb-4 mt-0 d-flex justify-content-start align-items-center w-100 p-0 position-relative" style="left: 18px;"><img src="assets/img/chips.png" width="12">&nbsp;2</p>
+					<div class="d-flex position-relative">
+					<img src="assets/img/backcards.png" class="m-0 pattirotate">
+					<img src="assets/img/backcards.png" class="pattirotate-center">
+					<img src="assets/img/backcards.png" class="pattirotate-end">
+					<button class="see-btn position-absolute">See</button>
+				</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+<div class="fixpoint position-fixed bottom-0 end-0 p-2">
+	Lorem ipsum dolor
+</div>
+
+<div class="container-fluid">
+	<div class="container">
+		<div class="row align-items-center packblindiv">
+			<div class="col-4 bootpoint position-relative d-none" style="border-radius: 15px 0 0 15px;">
+				<ul>
+					<li>
+						<strong class="text-capitalize float-start">Boot</strong>
+						<span class="text-capitalize float-end">1</span>
+					</li>
+					<li>
+						<strong class="text-capitalize  float-start">Table</strong>
+						<span class="text-capitalize float-end">Normal</span>
+					</li>
+				</ul>
+			</div>
+			<div class="col-4">
+				<button class="pack-btn text-center">Pack</button>
+			</div>
+			<div class="col-4 bootpoint position-relative">
+				<div class="d-flex w-100">
+					<img src="assets/img/teenpattigamecoin.png" class="position-absolute teenpattigamecoin" />
+					<p class="mb-0 bootpointtext">4939.54</p>
+				</div>
+			</div>
+			<div class="col-4 bootpoint position-relative d-none" style="border-radius: 0px 15px 15px 0px;">
+				<ul>
+					<li>
+						<strong class="text-capitalize float-start">Boot</strong>
+						<span class="text-capitalize float-end">1</span>
+					</li>
+					<li>
+						<strong class="text-capitalize  float-start">Table</strong>
+						<span class="text-capitalize float-end">Normal</span>
+					</li>
+				</ul>
+			</div>
+			<div class="col-4">
+				<div class="d-flex align-items-center">
+				<button class="btn plush-btn" style="opacity: 0.5;">-</button>
+				<button class="pack-btn text-center mx-4">Blind<span class="d-block text-center">1</span></button>
+				<button class="btn plush-btn">+</button>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="chat-fix position-fixed">
+	<button class="btn btn-header" data-bs-toggle="modal" data-bs-target="#chatModal">
+				<img src="assets/img/chat.png" />
+			</button>
+</div>
+
+</div>
+
+
+<div class="modal fade setting-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Setting</h5>
+        <button class="btn btn-header me-2" data-bs-dismiss="modal" aria-label="Close">
+				<img src="assets/img/back.png">
+			</button>
+      </div>
+      <div class="modal-body">
+        <ul class="pokerMenu-list">
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						Disable All <input type="checkbox" id="switch" class="" name="">
+				    <label for="switch" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						Sound <input type="checkbox" id="muteChat" class="" name="">
+				    <label for="muteChat" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						Voice <input type="checkbox" id="autoMuck" class="" name="">
+				    <label for="autoMuck" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						Player Turn Sound <input type="checkbox" id="runitTwice" class="" name="">
+				    <label for="runitTwice" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						Vibrations <input type="checkbox" id="vibrations" class="" name="">
+				    <label for="vibrations" class="value_add"></label>
+					</li>
+				</ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade setting-modal chatModal-div" id="chatModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content border-0">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Chat<p>(Tap on any message to send)</p></h5>
+        <button class="btn btn-header me-2" data-bs-dismiss="modal" aria-label="Close">
+				<i class="fa-solid fa-xmark pt-1"></i>
+			</button>
+      </div>
+      <div class="modal-body">
+        <ul class="chatmodallist">
+        	<li>One More Game</li>
+        	<li>Nice Played</li>
+        	<li>Please play fast</li>
+        	<li>Thats's how you win it.</li>
+        	<li>Thanks</li>
+        	<li>Well Played!</li>
+        	<li>Please play Blind</li>
+        	<li>I love 3Patti</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade setting-modal tableinformation" id="tableinformation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content border-0">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Table Information</h5>
+        <button class="btn btn-header me-2" data-bs-dismiss="modal" aria-label="Close">
+				<i class="fa-solid fa-xmark pt-1"></i>
+			</button>
+      </div>
+      <div class="modal-body">
+      	<p class="d-block text-center">Highest hand wins. Ranking from High to Low is:</p>
+      	<div class="container-fluid tablerankcard mb-2">
+      		<div class="row">
+      			<div class="col-12">
+      				<p class="mb-2">1.  Trail or Set [three of same rank]</p>
+      			</div>
+      		</div>
+      		<div class="row">
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+
+      		</div>
+      	</div>
+
+      	<div class="container-fluid tablerankcard mb-2">
+      		<div class="row">
+      			<div class="col-12">
+      				<p class="mb-2">2.  Trail or Set [three of same rank]</p>
+      			</div>
+      		</div>
+      		<div class="row">
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+
+      		</div>
+      	</div>
+
+      	<div class="container-fluid tablerankcard mb-2">
+      		<div class="row">
+      			<div class="col-12">
+      				<p class="mb-2">3.  Trail or Set [three of same rank]</p>
+      			</div>
+      		</div>
+      		<div class="row">
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+
+      		</div>
+      	</div>
+
+      	<div class="container-fluid tablerankcard mb-2">
+      		<div class="row">
+      			<div class="col-12">
+      				<p class="mb-2">4.  Trail or Set [three of same rank]</p>
+      			</div>
+      		</div>
+      		<div class="row">
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+
+      		</div>
+      	</div>
+
+      	<div class="container-fluid tablerankcard mb-2">
+      		<div class="row">
+      			<div class="col-12">
+      				<p class="mb-2">5.  Trail or Set [three of same rank]</p>
+      			</div>
+      		</div>
+      		<div class="row">
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+
+      		</div>
+      	</div>
+
+      	<div class="container-fluid tablerankcard mb-2">
+      		<div class="row">
+      			<div class="col-12">
+      				<p class="mb-2">6.  Trail or Set [three of same rank]</p>
+      			</div>
+      		</div>
+      		<div class="row">
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+
+      		</div>
+      	</div>
+
+      	<div class="container-fluid tablerankcard mb-2">
+      		<div class="row">
+      			<div class="col-12">
+      				<p class="mb-2">7.  Trail or Set [three of same rank]</p>
+      			</div>
+      		</div>
+      		<div class="row">
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+      			<div class="col-3">
+      				<div class="d-flex">
+      				<img class="m-0" src="assets/img/card.png" />
+      				<img class="card-start" src="assets/img/card1.png" />
+      				<img class="card-start" src="assets/img/card2.png" />
+      			</div>
+      			</div>
+
+      		</div>
+      	</div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+
+</body>
+</html>
