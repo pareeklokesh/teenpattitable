@@ -9,13 +9,13 @@
 	<link rel="stylesheet" type="text/css" href="assets/Fontawsome/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="teenpatti-lobby">
-<div class="w-100 overflow-hidden">
+<body class="teenpatti-lobby" style="overflow-x: hidden;">
+<div class="w-100 overflow-hidden" style="overflow: hidden;">
 	<div class="teenpatti-header container-fluid py-3">
 	<div class="row justify-content-between">
 		<div class="w-auto d-flex align-items-center">
-			<button class="btn btn-header me-4">
-				<img src="assets/img/back.png" />
+			<button class="btn btn-header me-4 lobbymenuBtn d-flex align-items-center justify-content-center">
+				<i class="fa-solid fa-bars portrait-block"></i>
 			</button>
 			<div class="d-flex align-items-center">
 			<div class="teenpattiprofile position-relative">
@@ -25,18 +25,42 @@
 		</div>
 	</div>
 		<div class="w-auto">
-			<button class="btn btn-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			<button class="btn btn-header me-3">
+				<img src="assets/img/back.png" />
+			</button>
+			<button class="btn btn-header settingsBtn">
 				<i class="fa-solid fa-gear"></i>
 			</button>
+
+			<div class="lobbyMenu settingpopup position-absolute top-0">
+        <button class="btn text-uppercase position-relative">Settings <i class="fa-solid fa-xmark"></i></button>
+        <ul class="pokerMenu-list">
+          <li class="d-block pokernav-item text-uppercase switchToggle">
+            <i class="fa-solid fa-music"></i> Sound <input type="checkbox" id="switch" class="" name="">
+            <label for="switch" class="value_add"></label>
+          </li>
+          <li class="d-block pokernav-item text-uppercase switchToggle">
+            <i class="fa-solid fa-mobile"></i> Vibration <input type="checkbox" id="muteChat" class="" name="">
+            <label for="muteChat" class="value_add"></label>
+          </li>
+          <li class="d-block pokernav-item text-uppercase switchToggle">
+            <i class="fa-brands fa-rocketchat"></i> Chat <input type="checkbox" id="autoMuck" class="" name="">
+            <label for="autoMuck" class="value_add"></label>
+          </li>
+        </ul>
+      </div>
+
 		</div>
 </div>
 </div>
 
 
-<div class="container-fluid position-relative">
+<div class="container-fluid position-relative" style="padding-bottom: 80px;">
 	<h2 class="text-uppercase lobby-title d-flex justify-content-center mb-0"><span>classic</span></h2>
-	<div class="d-flex align-items-center justify-content-center mt-5" style="gap:5%;">
-		<div class="position-relative lobbybetpoint">
+
+	<div class="row align-items-center justify-content-center mt-5 betgapdiv">
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
 			<img src="assets/img/bet.png">
 			<div class="userlobbypoint">1</div>
 			<div class="usernumber-lobby">
@@ -47,8 +71,10 @@
 			</div>
 			<div class="buyinpointlobby">1</div>
 		</div>
+	</div>
 
-		<div class="position-relative lobbybetpoint">
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
 			<img src="assets/img/bet2.png">
 			<div class="userlobbypoint">1</div>
 			<div class="usernumber-lobby">
@@ -59,8 +85,10 @@
 			</div>
 			<div class="buyinpointlobby">1</div>
 		</div>
+	</div>
 
-		<div class="position-relative lobbybetpoint">
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
 			<img src="assets/img/bet2.png">
 			<div class="userlobbypoint">7</div>
 			<div class="usernumber-lobby" style="color: #1ceb1f;">
@@ -71,8 +99,10 @@
 			</div>
 			<div class="buyinpointlobby">1</div>
 		</div>
+		</div>
 
-		<div class="position-relative lobbybetpoint">
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
 			<img src="assets/img/bet.png">
 			<div class="userlobbypoint">1</div>
 			<div class="usernumber-lobby">
@@ -83,8 +113,10 @@
 			</div>
 			<div class="buyinpointlobby">1</div>
 		</div>
+		</div>
 
-		<div class="position-relative lobbybetpoint">
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
 			<img src="assets/img/bet.png">
 			<div class="userlobbypoint">1</div>
 			<div class="usernumber-lobby">
@@ -94,12 +126,225 @@
 				Buy-in
 			</div>
 			<div class="buyinpointlobby">1</div>
+		</div>
+		</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+	</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet2.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+	</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet2.png">
+			<div class="userlobbypoint">7</div>
+			<div class="usernumber-lobby" style="color: #1ceb1f;">
+				5 <i class="fa-solid fa-user" style="color: #1ceb1f;"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+		</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+		</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+		</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+	</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet2.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+	</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet2.png">
+			<div class="userlobbypoint">7</div>
+			<div class="usernumber-lobby" style="color: #1ceb1f;">
+				5 <i class="fa-solid fa-user" style="color: #1ceb1f;"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+		</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+		</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+		</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+	</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet2.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+	</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet2.png">
+			<div class="userlobbypoint">7</div>
+			<div class="usernumber-lobby" style="color: #1ceb1f;">
+				5 <i class="fa-solid fa-user" style="color: #1ceb1f;"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+		</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
+		</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet.png">
+			<div class="userlobbypoint">1</div>
+			<div class="usernumber-lobby">
+				5 <i class="fa-solid fa-user"></i>
+			</div>
+			<div class="buyinlobbybtn">
+				Buy-in
+			</div>
+			<div class="buyinpointlobby">1</div>
+		</div>
 		</div>
 
 	</div>
+
+
 </div>
 
-<div class="container-fluid d-flex justify-content-between position-fixed bottom-0 playerfixBtn align-items-center pb-2">
+<div class="container-fluid d-flex justify-content-between position-fixed bottom-0 playerfixBtn align-items-center pb-2" style="z-index: 99;">
 	<div class="w-auto">
 		<p class="mb-0 text-uppercase">Live Players: <span>5</span></p>
 	</div>
@@ -112,7 +357,42 @@
 
 </div>
 
+<!-- -----------------Menu------------------------- -->
 
+      <div class="lobbyMenu position-fixed top-0">
+        <button class="btn text-uppercase landscape-block"><img class="profile-menu position-relative" src="assets/img/man.png"><span><span class="d-block w-100">Hi,</span>Shiveesinghal</span></button>
+        <button class="lobbyclose-btn" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+
+        <ul class="pokerMenu-list">
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-forward-step"></i> transaction</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><img src="assets/img/cash.png" width="24" />KYC</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-person-arrow-up-from-line"></i> Bank Details</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-person-arrow-up-from-line"></i> Deposit History </a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-question"></i> My Transactions</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-right-from-bracket"></i> My Invitations</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-right-from-bracket"></i> Player Invitations</a>
+          </li>
+          <li class="d-block">
+            <button class="text-uppercase logout-lobbybtn">LOgout</button>
+          </li>
+        </ul>
+
+      </div>
+
+<!-- -----------------Menu------------------------- -->
 
 
 </div>
@@ -128,6 +408,21 @@
 
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.min.js"></script>
+
+<script>
+	$(".lobbymenuBtn").click(function(){
+	$(".lobbyMenu").toggleClass("lobbyMenu-open");
+	});
+	$(".lobbyclose-btn").click(function(){
+		$(".lobbyMenu").removeClass("lobbyMenu-open");
+	});
+	$(".settingsBtn").click(function(){
+	$(".settingpopup").toggleClass("settingpopup-open");
+	});
+	$(".settingpopup button i").click(function(){
+  $(".settingpopup").removeClass("settingpopup-open");
+});
+</script>
 
 </body>
 </html>

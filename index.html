@@ -14,16 +14,16 @@
 	<div class="teenpatti-header container-fluid py-3">
 	<div class="row justify-content-between">
 		<div class="w-auto d-flex align-items-center">
-			<button class="btn btn-header me-3">
-				<img src="assets/img/back.png" />
+			<button class="btn btn-header me-4 lobbymenuBtn d-flex align-items-center justify-content-center">
+				<i class="fa-solid fa-bars portrait-block"></i>
 			</button>
-			<button class="btn btn-header me-3">
+			<button class="btn btn-header me-3" data-bs-toggle="modal" data-bs-target="#tableinformation">
 				<i class="fa-solid fa-info"></i>
 			</button>
 			<p class="hardid mb-0">Hard ID: 4754105<span class="d-block">Max Player: 5</span></p>
 	</div>
 		<div class="w-auto">
-		 	<button class="btn btn-header me-3 p-0" data-bs-toggle="modal" data-bs-target="#tableinformation">
+		 	<button class="btn btn-header me-3 p-0" data-bs-toggle="modal" data-bs-target="#themeModal">
 				<img src="assets/img/theme.png" width="28" />
 			</button>
 			<button class="btn btn-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -154,9 +154,62 @@
 
 </div>
 
+<div class="modal fade setting-modal" id="themeModal" tabindex="-1" aria-labelledby="themeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content border-0">
+      <div class="modal-header">
+        <h5 class="modal-title" id="themeModalLabel">Theme Change</h5>
+        <button class="btn btn-header me-2" data-bs-dismiss="modal" aria-label="Close">
+				<img src="assets/img/back.png">
+			</button>
+      </div>
+      <div class="modal-body">
+      	<div class="container-fluid selcetavtar mb-4">
+      		<div class="col-12 subtitleModal">avtar</div>
+        <div class="row">
+        	<div class="col-4 mb-3">
+        		<img src="assets/img/tipdealer.png" />
+        	</div>
+        	<div class="col-4 mb-3">
+        		<img src="assets/img/tipdealer.png" />
+        	</div>
+        	<div class="col-4 mb-3">
+        		<img src="assets/img/tipdealer.png" />
+        	</div>
+        </div>
+      </div>
+
+      <div class="container-fluid selcetavtar mb-4">
+      		<div class="col-12 subtitleModal">table</div>
+        <div class="row">
+        	<div class="col-12 mb-3">
+        		<img src="assets/img/teenpattitable.png" class="w-100" />
+        	</div>
+        </div>
+      </div>
+
+      <div class="container-fluid selcetavtar mb-4">
+      		<div class="col-12 subtitleModal">Background</div>
+        <div class="row">
+        	<div class="col-4 mb-3">
+        		<div class="selectbgmodal"></div>
+        	</div>
+        	<div class="col-4 mb-3">
+        		<div class="selectbgmodal" style="background: #fff;"></div>
+        	</div>
+        	<div class="col-4 mb-3">
+        		<div class="selectbgmodal" style="background: red;"></div>
+        	</div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="modal fade setting-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog me-0 mt-0">
     <div class="modal-content border-0">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Setting</h5>
@@ -507,10 +560,60 @@
     </div>
   </div>
 </div>
+<!-- -----------------Menu------------------------- -->
 
+      <div class="lobbyMenu position-fixed top-0">
+        <button class="btn text-uppercase landscape-block"><img class="profile-menu position-relative" src="assets/img/man.png"><span><span class="d-block w-100">Hi,</span>Shiveesinghal</span></button>
+        <button class="lobbyclose-btn" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+
+        <ul class="pokerMenu-list">
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-forward-step"></i> transaction</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><img src="assets/img/cash.png" width="24" />KYC</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-person-arrow-up-from-line"></i> Bank Details</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-person-arrow-up-from-line"></i> Deposit History </a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-question"></i> My Transactions</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-right-from-bracket"></i> My Invitations</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-right-from-bracket"></i> Player Invitations</a>
+          </li>
+          <li class="d-block">
+            <button class="text-uppercase logout-lobbybtn">LOgout</button>
+          </li>
+        </ul>
+
+      </div>
+
+<!-- -----------------Menu------------------------- -->
 
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.min.js"></script>
+
+<script>
+	$(".lobbymenuBtn").click(function(){
+	$(".lobbyMenu").toggleClass("lobbyMenu-open");
+	});
+	$(".lobbyclose-btn").click(function(){
+		$(".lobbyMenu").removeClass("lobbyMenu-open");
+	});
+	$(".settingsBtn").click(function(){
+	$(".settingpopup").toggleClass("settingpopup-open");
+	});
+	$(".settingpopup button i").click(function(){
+  $(".settingpopup").removeClass("settingpopup-open");
+});
+</script>
 
 </body>
 </html>
