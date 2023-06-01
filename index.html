@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/Fontawsome/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="overflow-x-hidden">
 <div class="w-100 overflow-hidden">
 	<div class="teenpatti-header container-fluid py-3">
 	<div class="row justify-content-between">
@@ -23,12 +23,43 @@
 			<p class="hardid mb-0">Hard ID: 4754105<span class="d-block">Max Player: 5</span></p>
 	</div>
 		<div class="w-auto">
-		 	<button class="btn btn-header me-3 p-0" data-bs-toggle="modal" data-bs-target="#themeModal">
+		 	<button class="btn btn-header me-3 p-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
 				<img src="assets/img/theme.png" width="28" />
 			</button>
-			<button class="btn btn-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			<button class="btn btn-header settingsBtn">
 				<i class="fa-solid fa-gear"></i>
 			</button>
+			<div class="lobbyMenu settingpopup position-absolute top-0">
+        <button class="btn text-uppercase position-relative">Settings <i class="fa-solid fa-xmark"></i></button>
+        <ul class="pokerMenu-list">
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						<i class="fa-solid fa-microphone-slash"></i>
+						Disable All <input type="checkbox" id="switch" class="" name="">
+				    <label for="switch" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						<i class="fa-solid fa-music"></i>
+						Sound <input type="checkbox" id="muteChat" class="" name="">
+				    <label for="muteChat" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						<i class="fa-solid fa-microphone"></i>
+						Voice <input type="checkbox" id="autoMuck" class="" name="">
+				    <label for="autoMuck" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						<i class="fa-solid fa-music"></i>
+						Player Turn Sound <input type="checkbox" id="runitTwice" class="" name="">
+				    <label for="runitTwice" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						<i class="fa-solid fa-mobile"></i>
+						Vibrations <input type="checkbox" id="vibrations" class="" name="">
+				    <label for="vibrations" class="value_add"></label>
+					</li>
+				</ul>
+
+      </div>
 		</div>
 </div>
 </div>
@@ -154,6 +185,55 @@
 
 </div>
 
+<div class="offcanvas offcanvas-end offcanvasAll" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Theme Change</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+    	<img src="assets/img/back.png">
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="container-fluid selcetavtar mb-4">
+      		<div class="col-12 subtitleModal">avtar</div>
+        <div class="row">
+        	<div class="col-4 mb-3">
+        		<img src="assets/img/tipdealer.png" />
+        	</div>
+        	<div class="col-4 mb-3">
+        		<img src="assets/img/tipdealer.png" />
+        	</div>
+        	<div class="col-4 mb-3">
+        		<img src="assets/img/tipdealer.png" />
+        	</div>
+        </div>
+      </div>
+
+      <div class="container-fluid selcetavtar mb-4">
+      		<div class="col-12 subtitleModal">table</div>
+        <div class="row">
+        	<div class="col-12 mb-3">
+        		<img src="assets/img/teenpattitable.png" class="w-100" />
+        	</div>
+        </div>
+      </div>
+
+      <div class="container-fluid selcetavtar mb-4">
+      		<div class="col-12 subtitleModal">Background</div>
+        <div class="row">
+        	<div class="col-4 mb-3">
+        		<div class="selectbgmodal"></div>
+        	</div>
+        	<div class="col-4 mb-3">
+        		<div class="selectbgmodal" style="background: #fff;"></div>
+        	</div>
+        	<div class="col-4 mb-3">
+        		<div class="selectbgmodal" style="background: red;"></div>
+        	</div>
+        </div>
+      </div>
+  </div>
+</div>
+
 <div class="modal fade setting-modal" id="themeModal" tabindex="-1" aria-labelledby="themeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content border-0">
@@ -205,6 +285,39 @@
 
       </div>
     </div>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end offcanvasAll" tabindex="-1" id="offcanvasSeting" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasSetingLabel">Setting</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+    	<img src="assets/img/back.png">
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="pokerMenu-list">
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						Disable All <input type="checkbox" id="switch" class="" name="">
+				    <label for="switch" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						Sound <input type="checkbox" id="muteChat" class="" name="">
+				    <label for="muteChat" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						Voice <input type="checkbox" id="autoMuck" class="" name="">
+				    <label for="autoMuck" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						Player Turn Sound <input type="checkbox" id="runitTwice" class="" name="">
+				    <label for="runitTwice" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-capitalize switchToggle">
+						Vibrations <input type="checkbox" id="vibrations" class="" name="">
+				    <label for="vibrations" class="value_add"></label>
+					</li>
+				</ul>
   </div>
 </div>
 
@@ -285,7 +398,7 @@
       	<div class="container-fluid tablerankcard mb-2">
       		<div class="row">
       			<div class="col-12">
-      				<p class="mb-2">1.  Trail or Set [three of same rank]</p>
+      				<p class="mb-2" style="color: #4e300f;">1.  Trail or Set [three of same rank]</p>
       			</div>
       		</div>
       		<div class="row">
@@ -324,7 +437,7 @@
       	<div class="container-fluid tablerankcard mb-2">
       		<div class="row">
       			<div class="col-12">
-      				<p class="mb-2">2.  Trail or Set [three of same rank]</p>
+      				<p class="mb-2" style="color: #4e300f;">2.  Trail or Set [three of same rank]</p>
       			</div>
       		</div>
       		<div class="row">
@@ -363,7 +476,7 @@
       	<div class="container-fluid tablerankcard mb-2">
       		<div class="row">
       			<div class="col-12">
-      				<p class="mb-2">3.  Trail or Set [three of same rank]</p>
+      				<p class="mb-2" style="color: #4e300f;">3.  Trail or Set [three of same rank]</p>
       			</div>
       		</div>
       		<div class="row">
@@ -402,7 +515,7 @@
       	<div class="container-fluid tablerankcard mb-2">
       		<div class="row">
       			<div class="col-12">
-      				<p class="mb-2">4.  Trail or Set [three of same rank]</p>
+      				<p class="mb-2" style="color: #4e300f;">4.  Trail or Set [three of same rank]</p>
       			</div>
       		</div>
       		<div class="row">
@@ -441,7 +554,7 @@
       	<div class="container-fluid tablerankcard mb-2">
       		<div class="row">
       			<div class="col-12">
-      				<p class="mb-2">5.  Trail or Set [three of same rank]</p>
+      				<p class="mb-2" style="color: #4e300f;">5.  Trail or Set [three of same rank]</p>
       			</div>
       		</div>
       		<div class="row">
@@ -480,7 +593,7 @@
       	<div class="container-fluid tablerankcard mb-2">
       		<div class="row">
       			<div class="col-12">
-      				<p class="mb-2">6.  Trail or Set [three of same rank]</p>
+      				<p class="mb-2" style="color: #4e300f;">6.  Trail or Set [three of same rank]</p>
       			</div>
       		</div>
       		<div class="row">
@@ -519,7 +632,7 @@
       	<div class="container-fluid tablerankcard mb-2">
       		<div class="row">
       			<div class="col-12">
-      				<p class="mb-2">7.  Trail or Set [three of same rank]</p>
+      				<p class="mb-2" style="color: #4e300f;">7.  Trail or Set [three of same rank]</p>
       			</div>
       		</div>
       		<div class="row">

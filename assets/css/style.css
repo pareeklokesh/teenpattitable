@@ -168,7 +168,7 @@ a {
   top: 30%;
 }
 .setting-modal .modal-content {
-  background: linear-gradient(#3fa36f, #194328);
+  background: #1a0a0b;
 }
 .pokerMenu-list {
   padding: 0;
@@ -250,6 +250,7 @@ a {
   font-size: 28px;
   font-weight: 500;
   text-transform: uppercase;
+  color: #4e300f;
 }
 .setting-modal .modal-header {
   padding-bottom: 10px;
@@ -292,16 +293,15 @@ a {
 .setting-modal .modal-header {
   padding-bottom: 10px;
   padding-top: 10px;
-  border-bottom: 3px solid #d6ce77;
-  background: linear-gradient(#45660b, #3a5c08);
-  box-shadow: 0 4px 6px #44650a;
+  background: linear-gradient(#dfbd51, #c68408);
 }
 .card-start {
   margin-left: -28px;
 }
 .tablerankcard {
-  background: #12341c;
-  border: 1px solid #556138;
+  background: linear-gradient(#dfbd51, #c68408);
+  border: 0;
+  border-radius: 2px;
 }
 .tablerankcard {
   padding-bottom: 5px;
@@ -388,7 +388,7 @@ border: 1px solid #bcaf61 !important;
 }
 .lobbyMenu {
   padding-top: 0 !important;
-  background: #000;
+  background: #1a0a0b;
 border: 1px solid #bcaf61 !important;
   left: 0;
 }
@@ -466,10 +466,13 @@ border: 1px solid #bcaf61 !important;
 }
 .pokernav-item:hover {
   background: #dcbd7d;
-  color: #000;
+  color: #1a0a0b;
 }
 .pokernav-item:hover i {
-  color: #000;
+  color: #1a0a0b;
+}
+.pokernav-item:hover .upcoming-text {
+  color: #1a0a0b;
 }
 
 /* -------------------Menu Css End!------------------- */
@@ -525,18 +528,19 @@ border: 1px solid #bcaf61 !important;
   color: #fff;
 }
 .selcetavtar {
-  background: #12341c;
-  border: 1px solid #556138;
+  background: linear-gradient(#dfbd51, #c68408);
+  border: 0;
   text-align: center;
   border-radius: 4px;
 }
 .subtitleModal {
-  border-bottom: 1px solid #1a4426;
+  border-bottom: 1px solid #c4a241;
   font-weight: 500;
   font-size: 22px;
   text-transform: capitalize;
   margin-bottom: 20px;
   padding: 8px 0;
+  color: #4e300f;
 }
 .selectbgmodal {
   background: #000;
@@ -551,6 +555,35 @@ border: 1px solid #bcaf61 !important;
   text-align: right;
   text-transform: capitalize;
   margin-top: -3px;
+}
+.offcanvasAll {
+  background: #1a0a0b;
+}
+.offcanvasAll .offcanvas-title {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.offcanvasAll .btn-close {
+  background: linear-gradient(#dfbd51, #c68408);
+  border-radius: 50%;
+  border: 0;
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+}
+.offcanvasAll .pokerMenu-list .pokernav-item {
+  border: 0;
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+  color: #fff;
+}
+.setting-modal .modal-header .btn-header {
+  background: #1a0a0b;
+}
+.setting-modal .modal-header .btn-header i {
+  color: #fff;
 }
 
 
