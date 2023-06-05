@@ -37,10 +37,6 @@ a {
   padding: 12px;
 }
 .teenpattiprofile {
-  width: 70px;
-  height: 70px;
-}
-.teenpattiprofile {
   position: relative;
   z-index: 2;
 }
@@ -80,9 +76,9 @@ a {
   height: auto;
   border-radius: 60px;
   border: 2px solid transparent;
-  padding: 5px 28px;
+  padding: 3px 18px;
   margin-left: -50px;
-  padding-left: 60px;
+  padding-left: 55px;
 }
 .username::before {
   border-radius: 60px;
@@ -93,8 +89,8 @@ a {
   background: #aa1567;
   border-radius: 5px;
   font-weight: 400;
-  font-size: 14px;
-  padding: 1px 10px;
+  font-size: 11px;
+  padding: 0px 8px;
   text-align: center;
   line-height: 18px;
 }
@@ -502,7 +498,7 @@ border: 1px solid #bcaf61 !important;
   display: flex !important;
 }
 .lobbyMenu button img {
-  margin-right: 25px;
+  margin-right: 18px;
 }
 .lobbyMenu .lobbyclose-btn {
   border: 0 !important;
@@ -824,7 +820,7 @@ body.teenpatti-lobby {
   max-width: 100%;
 }
 .lobbyMenu button img.profile-menu {
-  width: 80px;
+  width: 60px;
   background: #301316;
   box-shadow: 0 0 6px #301316;
   border-radius: 6px;
@@ -873,7 +869,7 @@ body.teenpatti-lobby {
   height: 25px;
   transform: rotate(90deg);
   position: absolute;
-  right: 15px;
+  right: 0px;
   margin: 0;
   color: #fff;
 }
@@ -927,11 +923,11 @@ body.teenpatti-lobby {
 .submenuarrow, .teenpatti-lobby .lisubmenuactive .pokernav-item i.submenuarrow, .lisubmenuactive a .submenuarrow {
   transform: rotate(-90deg);
 }
-.pokerMenu-list {
+/*.pokerMenu-list {
   overflow: auto;
   height: 100%;
   padding-bottom: 150px;
-}
+}*/
 .lobbyMenu {
   height: 100vh;
 }
@@ -1202,7 +1198,7 @@ input:checked + .radiolabelall::after {
 .carousel-control-prev.slide-control {
   right: 35px;
 }
-.variationsText span {
+.variationsText p {
   font-weight: 900;
   font-size: 18px;
   background: linear-gradient(#ab49f9, #a640f8, #954df7, #7920f6);
@@ -1210,8 +1206,10 @@ input:checked + .radiolabelall::after {
   -webkit-background-clip: text;
   padding: 0 4px;
   padding-left: 0;
+  width: auto;
+display: inline-block;
 }
-.variationsText span::before, .variationsText span::after {
+.variationsText p::before, .variationsText p::after {
   content: "";
   display: block;
   width: 100%;
@@ -1223,20 +1221,33 @@ input:checked + .radiolabelall::after {
   z-index: -1;
   border-radius: 0 6px 6px 0;
 }
-.variationsText span::after {
+.variationsText p::after {
   width: 30px;
   transform: skew(14deg);
   left: -6px;
 }
-.variationsText.vipText span {
+.variationsText.vipText p {
   background: linear-gradient(#615b37, #756638, #664d1f, #5a4c27);
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text;width: auto;
+display: inline-block;
 }
-.variationsText.classicText span {
+.variationsText.classicText p {
   background: linear-gradient(#d45f8c, #e8719f, #ef679c, #ed4988);
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;width: auto;
+display: inline-block;
+}
+.variationsText p span {
+  background: #000;
+    background-clip: border-box;
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -4px;
+  padding-bottom: 3px;
 }
 
 
