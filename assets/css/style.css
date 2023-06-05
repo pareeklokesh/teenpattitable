@@ -30,11 +30,15 @@ a {
   background: linear-gradient(#ffc706, #fffedb, #fff737);
   border-radius: 50%;
   border: 0;
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   border: 3px solid transparent;
   position: relative;
   padding: 12px;
+}
+.teenpattiprofile {
+  width: 70px;
+  height: 70px;
 }
 .teenpattiprofile {
   position: relative;
@@ -54,7 +58,7 @@ a {
 }
 .btn-header i {
   color: #fff;
-  font-size: 35px;
+  font-size: 26px;
   position: relative;
   z-index: 2;
 }
@@ -739,15 +743,15 @@ body.teenpatti-lobby {
   z-index: 1;
   text-align: center;
   font-weight: 900;
-  font-size: 36px;
+  font-size: 26px;
 }
 .usernumber-lobby i {
-  color: #fff;
+  color: #fff;font-size: 11px;
 }
 .usernumber-lobby {
   top: 45%;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
 }
 .buyinlobbybtn {
@@ -757,7 +761,7 @@ body.teenpatti-lobby {
   left: 0;
   right: 0;
   color: #2b1e01;
-  font-size: 16px;
+  font-size: 13px;
   text-transform: uppercase;
   font-weight: 800;
 }
@@ -769,14 +773,14 @@ body.teenpatti-lobby {
   color: #fff;
   z-index: 1;
   bottom: 10%;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 900;
   text-shadow: 0 2px 3px #000;
 }
 .playerfixBtn p {
   color: #fff;
   font-weight: 900;
-  font-size: 32px;
+  font-size: 18px;
   text-shadow: 0 3px 5px #000;
 }
 .playerfixBtn p span {
@@ -805,7 +809,7 @@ body.teenpatti-lobby {
   margin: 0;
   color: #ffc200;
   font-weight: 800;
-  font-size: 16px;
+  font-size: 14px;
   position: absolute;
   bottom: -25px;
   left: 0;
@@ -1198,7 +1202,42 @@ input:checked + .radiolabelall::after {
 .carousel-control-prev.slide-control {
   right: 35px;
 }
-
+.variationsText span {
+  font-weight: 900;
+  font-size: 18px;
+  background: linear-gradient(#ab49f9, #a640f8, #954df7, #7920f6);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding: 0 4px;
+  padding-left: 0;
+}
+.variationsText span::before, .variationsText span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 0 6px 6px 0;
+}
+.variationsText span::after {
+  width: 30px;
+  transform: skew(14deg);
+  left: -6px;
+}
+.variationsText.vipText span {
+  background: linear-gradient(#615b37, #756638, #664d1f, #5a4c27);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.variationsText.classicText span {
+  background: linear-gradient(#d45f8c, #e8719f, #ef679c, #ed4988);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
 
 
 
@@ -1209,6 +1248,13 @@ input:checked + .radiolabelall::after {
   width: 100%;
   max-width: 1366px;
 }
+}
+
+@media (min-width: 1100px) {
+  .lobbybetpoint img {
+  width: 150px;
+}
+
 }
 
 @media (max-width: 992px) {
