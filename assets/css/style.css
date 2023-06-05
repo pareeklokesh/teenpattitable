@@ -526,7 +526,7 @@ border: 1px solid #bcaf61 !important;
   cursor: pointer;
 }
 .pokernav-item img, .pokernav-item i {
-  margin-right: 20px;
+  margin-right: 0px;
 }
 .lobbyMenu .logout-lobbybtn {
   background: linear-gradient(#a91a27, #710e15);
