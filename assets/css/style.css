@@ -20,21 +20,79 @@ ul {
 a {
   text-decoration: none;
 }
-.btn-header {
-  background: linear-gradient(#dfbd51, #c68408);
+
+@font-face {
+  src: url('../webfont/cc-ultimatum-heavy.otf');
+  font-family: 'cc-ultimatum-heavy';
+}
+
+.btn-header, .teenpattiprofile, .username, .createTableBtn {
+  background: linear-gradient(#ffc706, #fffedb, #fff737);
   border-radius: 50%;
   border: 0;
-  width: 45px;
-  height: 45px;
+  width: 70px;
+  height: 70px;
+  border: 3px solid transparent;
+  position: relative;
+  padding: 12px;
+}
+.teenpattiprofile {
+  position: relative;
+  z-index: 2;
+}
+.btn-header::before, .teenpattiprofile::before, .username::before, .createTableBtn::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(#56102a, #68272e);
+  z-index: 1;
 }
 .btn-header i {
-  color: #4e300f;
-  font-size: 22px;
+  color: #fff;
+  font-size: 35px;
+  position: relative;
+  z-index: 2;
+}
+.btn-header img, .teenpattiprofile img {
+  position: relative;z-index: 2;
+}
+.teenpattiprofile {
+  padding: 0;
+  overflow: hidden;
+  padding-top: 5px;
 }
 .teenpattitablegame {
   background: url('../img/teenpattitable.png') no-repeat;
   background-size: cover;
-  height: 630px;
+  height: 580px;
+}
+.username {
+  width: auto;
+  height: auto;
+  border-radius: 60px;
+  border: 2px solid transparent;
+  padding: 5px 28px;
+  margin-left: -50px;
+  padding-left: 60px;
+}
+.username::before {
+  border-radius: 60px;
+}
+.username span, .username strong {
+  position: relative;
+  z-index: 1;
+  background: #aa1567;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 1px 10px;
+  text-align: center;
+  line-height: 18px;
 }
 .bootpoint {
   background: #310709;
@@ -197,7 +255,7 @@ a {
   width: 60px;
   max-width: 70px;
   height: 25px;
-  background: #881817;
+  background: #ff0000;
   display: inline-block;
   border-radius: 100px;
   position: relative;
@@ -388,12 +446,28 @@ border: 1px solid #bcaf61 !important;
 }
 .lobbyMenu {
   padding-top: 0 !important;
-  background: #1a0a0b;
-border: 1px solid #bcaf61 !important;
-  left: 0;
+  background: linear-gradient(to left, #ffc706, #fffedb, #fff737);
+  border: 1px solid transparent !important;
+  left: 10px;
+  top: 15px !important;
 }
 .lobbyMenu {
   width: 290px !important;
+}
+.lobbyMenu::before, .lobbyModal .modal-content::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #1c0210;
+  border-radius: 9px;
+}
+.lobbyMenu * {
+  position: relative;
+  z-index: 2;
 }
 .lobbyMenu-open {
   transform: translate(0);
@@ -414,7 +488,7 @@ border: 1px solid #bcaf61 !important;
   padding: 4px 20px;
   font-size: 28px;
   font-weight: 500;
-  border-bottom: 1.9px solid #bcaf61 !important;
+  border-bottom: 0 !important;
   border-radius: 6px 6px 0 0;
 }
 .lobbyMenu button.landscape-block {
@@ -606,9 +680,6 @@ border: 1px solid #bcaf61 !important;
   .teenpattitable-container {
   margin-top: -120px;
 }
-.betgapdiv {
-  gap: 1px;
-}
 
 }
 
@@ -618,17 +689,6 @@ border: 1px solid #bcaf61 !important;
 /* ---------------------Teen Patti lobby css---------------------------- */
 
 
-.teenpattiprofile {
-  background: url('../img/profilebg.png') no-repeat;
-    background-size: auto;
-  background-size: cover;
-  padding: 5px;
-  width: 86px;
-  height: 82px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 body.teenpatti-lobby {
   background: url('../img/bg.png') no-repeat !important;
   color: #fff;
@@ -660,56 +720,59 @@ body.teenpatti-lobby {
   right: -52%;
   left: auto;
 }
-.lobbybetpoint img {
-  width: 140px;
-}
+
 .userlobbypoint, .usernumber-lobby {
   position: absolute;
-  color: #000;
+  color: #050030;
   left: 0;
   right: 0;
   margin: 0px auto;
-  top: 22%;
+  top: 25%;
   z-index: 1;
   text-align: center;
-  font-weight: 800;
-  font-size: 18px;
+  font-weight: 900;
+  font-size: 36px;
 }
 .usernumber-lobby i {
-  color: #f6e72c;
+  color: #fff;
 }
 .usernumber-lobby {
-  top: 43%;
-  color: #f6e72c;
-  font-weight: 600;
+  top: 45%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
 }
 .buyinlobbybtn {
   position: absolute;
-  bottom: 4px;
+  bottom: 1%;
   text-align: center;
   left: 0;
   right: 0;
-  color: #000;
-  font-size: 13px;
-  font-weight: 600;
+  color: #2b1e01;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 .buyinpointlobby {
   position: absolute;
   left: 0;
   right: 0;
   text-align: center;
-  color: #000;
+  color: #fff;
   z-index: 1;
-  bottom: 19px;
-  font-size: 10px;
-  font-weight: 700;
+  bottom: 10%;
+  font-size: 22px;
+  font-weight: 900;
+  text-shadow: 0 2px 3px #000;
 }
 .playerfixBtn p {
-  color: #83690c;
-  font-weight: 600;
+  color: #fff;
+  font-weight: 900;
+  font-size: 32px;
+  text-shadow: 0 3px 5px #000;
 }
 .playerfixBtn p span {
-  color: #228324;
+  color: #4bff00;
 }
 .privatetable-btn {
   background: #552f0b;
@@ -729,6 +792,540 @@ body.teenpatti-lobby {
   left: 18px;
   top: 5px;
   width: 85px;
+}
+.revolvingjoker {
+  margin: 0;
+  color: #ffc200;
+  font-weight: 800;
+  font-size: 16px;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.betgapdiv .col-md-2.col-sm-4.col-6.mb-4 {
+  margin-bottom: 60px !important;
+} 
+.lobbybetpoint-container {
+  width: 100%;
+  max-width: 100%;
+}
+.teenpatti-lobby .lobbyMenu button img.profile-menu {
+  width: 80px;
+  background: #301316;
+  box-shadow: 0 0 6px #301316;
+  border-radius: 6px;
+}
+.teenpatti-lobby .lobbyMenu button span {
+  font-weight: 800;
+  font-size: 16px;
+}
+.teenpatti-lobby .lobbyMenu button {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.teenpatti-lobby .lobbyMenu button::before, .lobbyModal .modal-header::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to left, transparent 10%, #dbb71e, transparent 90%);
+}
+.teenpatti-lobby .pokernav-item i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px #472c39;
+  margin-right: 10px;
+}
+.teenpatti-lobby  .pokernav-item {
+  font-weight: 600;
+  border: 0;
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+  color: #fff;
+}
+.submenuarrow, .teenpatti-lobby .pokernav-item i.submenuarrow {
+  background: linear-gradient(#ede820, #8a6c02);
+  font-size: 16px;
+  width: 25px;
+  height: 25px;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 15px;
+  margin: 0;
+  color: #fff;
+}
+.pokermenu-submenu {
+  background: #301316;
+  width: 100%;
+  margin: 0px auto;
+  border: 1px solid #341211;
+  border-radius: 10px;
+}
+.teenpatti-lobby li {
+  padding: 0 15px;
+}
+.pokermenu-submenu li p {
+  margin: 0;
+  font-size: 14px;
+  width: 78%;
+}
+.pokermenu-submenu li p span:last-child {
+  float: right;
+  color: #ffe500;
+}
+.teenpatti-lobby .pokermenu-submenu .pokernav-item i {
+  width: 40px;
+  height: 40px;
+}
+.teenpatti-lobby .pokerMenu-list .pokermenu-submenu li::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to left, transparent 10%, #dbb71e, transparent 90%);
+}
+.teenpatti-lobby .pokerMenu-list .pokermenu-submenu li:last-child::before {
+  display: none;
+}
+.pokermenu-submenu {
+  display: none;
+  transition: all .4s linear;
+}
+.lisubmenuactive .pokermenu-submenu {
+  display: block;
+}
+.submenuarrow, .teenpatti-lobby .pokernav-item i.submenuarrow {
+  transition: all .1s linear;
+}
+.submenuarrow, .teenpatti-lobby .lisubmenuactive .pokernav-item i.submenuarrow, .lisubmenuactive a .submenuarrow {
+  transform: rotate(-90deg);
+}
+.teenpatti-lobby .pokerMenu-list {
+  overflow: auto;
+  height: 100%;
+  padding-bottom: 150px;
+}
+.teenpatti-lobby .lobbyMenu {
+  height: 100vh;
+}
+.teenpatti-lobby .lobbyMenu button.logout-lobbybtn {
+  background: linear-gradient(#e90019, #800011);
+  font-weight: 900;
+  font-size: 20px !important;
+  min-width: 80%;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  padding: 8px 5px;
+  border: 1px solid #fff633 !important;
+}
+.teenpatti-lobby .lobbyMenu button.logout-lobbybtn::before {
+  display: none;
+}
+.scroller {
+  scrollbar-color: #fff #1c0210;
+  scrollbar-width: thin;
+}
+.teenpatti-lobby .settingpopup {
+  height: auto;
+  right: 10px;
+}
+.teenpatti-lobby .settingpopup .pokernav-item i {
+  background: #a59d04;
+  color: #fff;
+  font-size: 18px;
+  width: 38px;
+  height: 38px;
+  margin-right: 0;
+  position: relative;
+}
+.teenpatti-lobby .settingpopup .pokernav-item {
+  padding: 6px 12px;
+  font-size: 18px;
+}
+.teenpatti-lobby .settingpopup .pokernav-item i.active {
+  background: #ff0000;
+}
+.teenpatti-lobby .settingpopup .pokernav-item i.active::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  transform: rotate(-35deg);
+  z-index: 1;
+  right: 0;
+  margin: 0px auto;
+}
+.teenpatti-lobby .settingpopup button {
+  padding: 5px 0;
+  font-weight: 700;
+}
+.teenpatti-lobby .settingpopup button i, .lobbyModal .modal-header .btn-close {
+  background: #f30000;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 23px;
+  padding: 3px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+.teenpatti-lobby .settingpopup .pokerMenu-list {
+  padding-bottom: 8px !important;
+}
+.lobbyModal .modal-content {
+  background: linear-gradient(to left, #ffc706, #fffedb, #fff737);
+  position: relative;
+}
+.teenpatti-lobby {
+  overflow-x: hidden !important;
+}
+.lobbyModal .modal-header .modal-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+.lobbyModal .modal-header {
+  padding: 10px;
+}
+.lobbyModal .modal-header .btn-close {
+  opacity: 1;
+  top: 22px;
+  position: relative;
+}
+.tablefortext {
+  font-size: 22px;
+  font-weight: 600;
+}
+.tableforradio input {
+  position: absolute;
+  visibility: hidden;
+}
+.tableforradio, .validmodalnumber, .referralCode {
+  background: #4b3714;
+  border: 1px solid #462c14;
+  padding: 8px 10px;
+  border-radius: 6px;
+  min-width: 100px;
+  position: relative;
+}
+.tableforradio label {
+  font-weight: 700;
+  font-size: 30px;
+  text-shadow: 0 0 8px #000;
+  line-height: 30px;
+  padding-left: 30px;
+  position: relative;
+}
+.tableforradio label::before, .tableforradio input:checked + label::after, .radiolabelall::after, .radiolabelall::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dfce3b;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 6px;
+  background: #1c0210;
+}
+.tableforradio input:checked + label::after, input:checked + .radiolabelall::after {
+  background: #dfce3b;
+  border: 0;
+}
+.tableforradio input:checked + label::after, input:checked + .radiolabelall::after {
+  background: #dfce3b;
+  border: 0;
+  width: 12px;
+  height: 12px;
+  left: 4px;
+  top: 10px;
+}
+.bootlabel {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+.validmodalnumber {
+  width: 150px;
+  outline: none;
+  box-shadow: none;
+  color: #f5f223;
+  font-weight: 600;
+  font-size: 20px;
+  text-shadow: 0 0 2px #000;
+}
+.createTableBtn::before {
+  border-radius: var(--bs-border-radius) !important;
+  background: linear-gradient(to top, #05ab20, #0bf238, #189924, #0a4c11);
+}
+.createTableBtn span {
+  position: relative;
+  z-index: 2;
+}
+.createTableBtn {
+  height: auto;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  min-width: 170px;
+  padding: 4px 8px;
+  border: 1.9px solid transparent;
+  text-shadow: 0 0 5px #000;
+}
+.createTableBtn::after, .createTableBtn span::after  {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url('../img/btnright.png') no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0;
+z-index: 3;
+background-position: right 4px;
+}
+.createTableBtn span::after {
+  transform: rotate(179deg);
+  background-position: right 0px;
+  left: -14px;
+}
+.joinnowTableBtn::before {
+  background: linear-gradient(to top, #91000b, #d70014, #c5001c, #460009);
+}
+.lobbyModal .modal-header .btn-close::before {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0 0 3px #4b0000;
+}
+.teenpatti-lobby .settingpopup2 button::before {
+  display: none !important;
+}
+.teenpatti-lobby .settingpopup2 button i {
+  left: auto;
+  z-index: 99;
+}
+.teenpatti-lobby .settingpopup2 button {
+  z-index: 9;
+}
+.radiolabelall {
+  padding-left: 35px;
+}
+.radiolabelall::before {
+  border-color: #fff;
+}
+input:checked + .radiolabelall::after {
+  border-color: #fff;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 6px;
+}
+.radiolabelall {
+  cursor: pointer;
+}
+.teenpatti-lobby .settingpopup.settingpopup2 {
+  width: 190px !important;
+}
+.referralCode {
+  color: #f5f223;
+  font-weight: 600;
+  font-size: 20px;
+}
+.teenpattiTablebody .btn-header {
+  background: linear-gradient(#dfbd51, #c68408);
+  border-radius: 50%;
+  border: 0;
+  width: 45px;
+  height: 45px;
+}
+.teenpattiTablebody .btn-header::before {
+  display: none;
+}
+.teenpattiTablebody .btn-header i {
+  color: #4e300f;
+  font-size: 22px;
+}
+.teenpattiTablebody .menumodaltext img {
+  width: 32px;
+}
+.slide-control {
+  background: #4e300f;
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+  border-radius: 50%;
+  padding: 4px;
+  right: 0;
+  left: auto;
+  top: 13px;
+}
+.carousel-control-prev.slide-control {
+  right: 35px;
+}
+
+
+
+
+
+
+@media (min-width: 1367px) {
+  .lobbybetpoint-container {
+  width: 100%;
+  max-width: 1366px;
+}
+}
+
+@media (max-width: 992px) {
+  .btn-header, .teenpattiprofile, .createTableBtn {
+  width: 45px;
+  height: 45px;
+  padding: 7px;
+}
+.btn-header i {
+  font-size: 22px;
+}
+.username span, .username strong {
+  font-size: 12px;
+}
+.username {
+  padding: 5px 15px;
+  padding-left: 55px;
+  margin: 0;
+}
+.teenpattiprofile {
+  width: 69px;
+  height: 69px;
+  left: -16px;
+}
+.teenpattiprofile {
+  position: absolute !important;
+  width: 69px !important;
+  height: 69px !important;
+  left: -16px;
+} 
+
+
+}
+
+@media (max-width: 767px) {
+  .logo {
+  width: 80px;
+}
+.btn-header, .teenpattiprofile, .createTableBtn {
+  width: 35px;
+  height: 35px;
+  padding: 0px;
+}
+.btn-header img, .teenpattiprofile img, .createTableBtn img {
+  width: 18px;
+}
+.btn-header i {
+  font-size: 16px;
+}
+.validmodalnumber {
+  width: 100%;
+}
+p {
+  font-size: 12px;
+}
+.bootlabel, .tablefortext, .validmodalnumber, .createTableBtn, .playerfixBtn p {
+  font-size: 16px;
+}
+.tableforradio label {
+  font-size: 22px;
+}
+.createTableBtn {
+  min-width: 100px;
+}
+.lobbyModal .modal-header .modal-title {
+  font-size: 22px;
+}
+.headerbtn-right .me-3 {
+  margin-right: 4px !important;
+}
+
+}
+
+@media (max-width: 540px) {
+  .username span, .username strong {
+  font-size: 10px;
+  line-height: 11px;
+  padding: 2px 5px;
+}
+.btn-header, .teenpattiprofile, .createTableBtn {
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.btn-header i {
+  font-size: 12px;
+}
+.btn-header img, .teenpattiprofile img, .createTableBtn img {
+  width: 15px;
+}
+.headerbtn-right {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+.teenpattiprofile {
+  width: 53px !important;
+  height: 53px !important;
+}
+.username {
+  padding: 5px 9px;
+  padding-left: 38px;
+  margin: 0;
+}
+.logo {
+  display: none;
+}
+.btn-header, .teenpattiprofile, .username, .createTableBtn {
+  border: 1px solid transparent;
+}
+.buyinpointlobby {
+  font-size: 14px;
+}
+.buyinlobbybtn, .usernumber-lobby  {
+  font-size: 12px;
+}
+.userlobbypoint{
+  font-size: 26px;
+}
+
 }
 
 /* ---------------------Teen Patti lobby css End!---------------------------- */

@@ -12,40 +12,74 @@
 <body class="teenpatti-lobby" style="overflow-x: hidden;">
 <div class="w-100 overflow-hidden" style="overflow: hidden;">
 	<div class="teenpatti-header container-fluid py-3">
-	<div class="row justify-content-between">
+	<div class="row justify-content-between align-items-center">
 		<div class="w-auto d-flex align-items-center">
 			<button class="btn btn-header me-4 lobbymenuBtn d-flex align-items-center justify-content-center">
-				<i class="fa-solid fa-bars portrait-block"></i>
+				<img src="assets/img/list.png" />
 			</button>
-			<div class="d-flex align-items-center">
-			<div class="teenpattiprofile position-relative">
-				<img src="assets/img/man.png" />
+			<div class="d-flex align-items-center position-relative">
+			<div class="teenpattiprofile position-relative" data-bs-toggle="modal" data-bs-target="#exitModal">
+				<img src="assets/img/man.png" class="w-100" />
 			</div>
-			<p class="username ms-3 mb-0">Mark Wood<strong class="d-block" style="font-size: 14px;">4939.00</strong></p>
+			<p class="username mb-0">
+				<span class="d-block mb-1">Mark Wood</span>
+				<strong class="d-block">4939.00</strong></p>
 		</div>
+		<div class="logo">
+			<a href="#"><img src="assets/img/logo.png" width="160" /></a>
+		</div>
+
 	</div>
-		<div class="w-auto">
+		<div class="w-auto headerbtn-right">
 			<button class="btn btn-header me-3">
-				<img src="assets/img/back.png" />
+				<i class="fa-solid fa-bell"></i>
 			</button>
-			<button class="btn btn-header settingsBtn">
+			<button class="btn btn-header me-3" data-bs-toggle="modal" data-bs-target="#inviteEarnModal">
+				<img src="assets/img/add.png" />
+			</button>
+			<button class="btn btn-header me-3" data-bs-toggle="modal" data-bs-target="#privatetableModal">
+				<img src="assets/img/meeting.png" />
+			</button>
+			<button class="btn btn-header me-3 settingsBtn">
 				<i class="fa-solid fa-gear"></i>
 			</button>
+			<button class="btn btn-header settingsBtn2">
+				<img src="assets/img/filter.png" />
+			</button>
 
-			<div class="lobbyMenu settingpopup position-absolute top-0">
-        <button class="btn text-uppercase position-relative">Settings <i class="fa-solid fa-xmark"></i></button>
-        <ul class="pokerMenu-list">
-          <li class="d-block pokernav-item text-uppercase switchToggle">
-            <i class="fa-solid fa-music"></i> Sound <input type="checkbox" id="switch" class="" name="">
+			<div class="lobbyMenu settingpopup settingpopup1 position-absolute top-0">
+        <button class="btn text-capitalize position-relative text-center justify-content-center">Settings <i class="fa-solid fa-xmark"></i></button>
+        <ul class="pokerMenu-list pb-0">
+          <li class="d-block pokernav-item text-capitalize d-flex align-items-center justify-content-between">
+            Sound <i class="fa-solid fa-volume-off"></i>
+          </li>
+          <li class="d-block pokernav-item text-capitalize d-flex align-items-center justify-content-between">
+            Music <i class="fa-solid fa-music"></i>
+          </li>
+          <li class="d-block pokernav-item text-capitalize d-flex align-items-center justify-content-between">
+            Vibration <i class="fa-solid fa-mobile"></i>
+          </li>
+          <li class="d-block pokernav-item text-capitalize switchToggle">
+            Chat <input type="checkbox" id="switch" class="" name="">
             <label for="switch" class="value_add"></label>
           </li>
-          <li class="d-block pokernav-item text-uppercase switchToggle">
-            <i class="fa-solid fa-mobile"></i> Vibration <input type="checkbox" id="muteChat" class="" name="">
-            <label for="muteChat" class="value_add"></label>
+        </ul>
+      </div>
+
+      <div class="lobbyMenu settingpopup settingpopup2 position-absolute top-0">
+        <button class="btn text-capitalize position-relative text-center justify-content-center"><i class="fa-solid fa-xmark"></i></button>
+        <ul class="pokerMenu-list pb-0">
+          <li class="d-block pokernav-item text-capitalize">
+            <input class="position-absolute invisible" type="radio" id="classic" name="classic"><label for="classic" class="radiolabelall d-block">Classic</label>
           </li>
-          <li class="d-block pokernav-item text-uppercase switchToggle">
-            <i class="fa-brands fa-rocketchat"></i> Chat <input type="checkbox" id="autoMuck" class="" name="">
-            <label for="autoMuck" class="value_add"></label>
+          <li class="d-block pokernav-item text-capitalize">
+            <input class="position-absolute invisible" type="radio" id="vip" name="classic"><label for="vip" class="radiolabelall d-block">Vip</label>
+          </li>
+          <li class="d-block pokernav-item text-capitalize">
+            <input class="position-absolute invisible" type="radio" id="variations" name="classic"><label for="variations" class="radiolabelall d-block">Variations</label>
+          </li>
+          <li class="d-block pokernav-item text-capitalize">
+            <input class="position-absolute invisible" type="radio" id="all" name="classic"><label for="all" class="radiolabelall d-block">All</label>
           </li>
         </ul>
       </div>
@@ -55,335 +89,290 @@
 </div>
 
 
-<div class="container-fluid position-relative" style="padding-bottom: 80px;">
-	<h2 class="text-uppercase lobby-title d-flex justify-content-center mb-0"><span>classic</span></h2>
-
+<div class="container-fluid position-relative">
+	<!-- <h2 class="text-uppercase lobby-title d-flex justify-content-center mb-0"><span>classic</span></h2> -->
+<div class="container lobbybetpoint-container">
 	<div class="row align-items-center justify-content-center mt-5 betgapdiv">
 		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0">
+				<img src="assets/img/vip.png">
+			</div>
 			<div class="lobbybetpoint position-relative d-inline-block">
 			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
+			<div class="userlobbypoint">50</div>
 			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
+				<i class="fa-solid fa-user"></i> 5
 			</div>
 			<div class="buyinlobbybtn">
-				Buy-in
+				Buy in
 			</div>
-			<div class="buyinpointlobby">1</div>
+			<div class="buyinpointlobby">500</div>
 		</div>
 	</div>
 
 		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0">
+				<img src="assets/img/classic.png">
+			</div>
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet1.png">
+			<div class="userlobbypoint">50</div>
+			<div class="usernumber-lobby">
+				<i class="fa-solid fa-user"></i> 5
+			</div>
+			<div class="buyinlobbybtn">
+				Buy in
+			</div>
+			<div class="buyinpointlobby">500</div>
+		</div>
+	</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0 position-relative">
+				<img src="assets/img/variations.png" />
+				<p class="revolvingjoker">Revolving Joker</p>
+			</div>
 			<div class="lobbybetpoint position-relative d-inline-block">
 			<img src="assets/img/bet2.png">
-			<div class="userlobbypoint">1</div>
+			<div class="userlobbypoint">50</div>
 			<div class="usernumber-lobby">
 				5 <i class="fa-solid fa-user"></i>
 			</div>
 			<div class="buyinlobbybtn">
-				Buy-in
+				Buy in
 			</div>
-			<div class="buyinpointlobby">1</div>
+			<div class="buyinpointlobby">500</div>
+		</div>
+		</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0">
+				<img src="assets/img/vip.png">
+			</div>
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet.png">
+			<div class="userlobbypoint">50</div>
+			<div class="usernumber-lobby">
+				<i class="fa-solid fa-user"></i> 5
+			</div>
+			<div class="buyinlobbybtn">
+				Buy in
+			</div>
+			<div class="buyinpointlobby">500</div>
 		</div>
 	</div>
 
 		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0">
+				<img src="assets/img/classic.png">
+			</div>
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet1.png">
+			<div class="userlobbypoint">50</div>
+			<div class="usernumber-lobby">
+				<i class="fa-solid fa-user"></i> 5
+			</div>
+			<div class="buyinlobbybtn">
+				Buy in
+			</div>
+			<div class="buyinpointlobby">500</div>
+		</div>
+	</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0 position-relative">
+				<img src="assets/img/variations.png" />
+				<p class="revolvingjoker">Revolving Joker</p>
+			</div>
 			<div class="lobbybetpoint position-relative d-inline-block">
 			<img src="assets/img/bet2.png">
-			<div class="userlobbypoint">7</div>
-			<div class="usernumber-lobby" style="color: #1ceb1f;">
-				5 <i class="fa-solid fa-user" style="color: #1ceb1f;"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-		</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
+			<div class="userlobbypoint">50</div>
 			<div class="usernumber-lobby">
 				5 <i class="fa-solid fa-user"></i>
 			</div>
 			<div class="buyinlobbybtn">
-				Buy-in
+				Buy in
 			</div>
-			<div class="buyinpointlobby">1</div>
+			<div class="buyinpointlobby">500</div>
 		</div>
 		</div>
 
 		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0">
+				<img src="assets/img/vip.png">
+			</div>
 			<div class="lobbybetpoint position-relative d-inline-block">
 			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
+			<div class="userlobbypoint">50</div>
 			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
+				<i class="fa-solid fa-user"></i> 5
 			</div>
 			<div class="buyinlobbybtn">
-				Buy-in
+				Buy in
 			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-		</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
-			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
+			<div class="buyinpointlobby">500</div>
 		</div>
 	</div>
 
 		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0">
+				<img src="assets/img/classic.png">
+			</div>
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet1.png">
+			<div class="userlobbypoint">50</div>
+			<div class="usernumber-lobby">
+				<i class="fa-solid fa-user"></i> 5
+			</div>
+			<div class="buyinlobbybtn">
+				Buy in
+			</div>
+			<div class="buyinpointlobby">500</div>
+		</div>
+	</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0 position-relative">
+				<img src="assets/img/variations.png" />
+				<p class="revolvingjoker">Revolving Joker</p>
+			</div>
 			<div class="lobbybetpoint position-relative d-inline-block">
 			<img src="assets/img/bet2.png">
-			<div class="userlobbypoint">1</div>
+			<div class="userlobbypoint">50</div>
 			<div class="usernumber-lobby">
 				5 <i class="fa-solid fa-user"></i>
 			</div>
 			<div class="buyinlobbybtn">
-				Buy-in
+				Buy in
 			</div>
-			<div class="buyinpointlobby">1</div>
+			<div class="buyinpointlobby">500</div>
+		</div>
+		</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0">
+				<img src="assets/img/vip.png">
+			</div>
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet.png">
+			<div class="userlobbypoint">50</div>
+			<div class="usernumber-lobby">
+				<i class="fa-solid fa-user"></i> 5
+			</div>
+			<div class="buyinlobbybtn">
+				Buy in
+			</div>
+			<div class="buyinpointlobby">500</div>
 		</div>
 	</div>
 
 		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0">
+				<img src="assets/img/classic.png">
+			</div>
+			<div class="lobbybetpoint position-relative d-inline-block">
+			<img src="assets/img/bet1.png">
+			<div class="userlobbypoint">50</div>
+			<div class="usernumber-lobby">
+				<i class="fa-solid fa-user"></i> 5
+			</div>
+			<div class="buyinlobbybtn">
+				Buy in
+			</div>
+			<div class="buyinpointlobby">500</div>
+		</div>
+	</div>
+
+		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
+			<div class="w-100 text-center mb-0 position-relative">
+				<img src="assets/img/variations.png" />
+				<p class="revolvingjoker">Revolving Joker</p>
+			</div>
 			<div class="lobbybetpoint position-relative d-inline-block">
 			<img src="assets/img/bet2.png">
-			<div class="userlobbypoint">7</div>
-			<div class="usernumber-lobby" style="color: #1ceb1f;">
-				5 <i class="fa-solid fa-user" style="color: #1ceb1f;"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-		</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
+			<div class="userlobbypoint">50</div>
 			<div class="usernumber-lobby">
 				5 <i class="fa-solid fa-user"></i>
 			</div>
 			<div class="buyinlobbybtn">
-				Buy-in
+				Buy in
 			</div>
-			<div class="buyinpointlobby">1</div>
+			<div class="buyinpointlobby">500</div>
 		</div>
 		</div>
 
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
-			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-		</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
-			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-	</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet2.png">
-			<div class="userlobbypoint">1</div>
-			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-	</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet2.png">
-			<div class="userlobbypoint">7</div>
-			<div class="usernumber-lobby" style="color: #1ceb1f;">
-				5 <i class="fa-solid fa-user" style="color: #1ceb1f;"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-		</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
-			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-		</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
-			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-		</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
-			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-	</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet2.png">
-			<div class="userlobbypoint">1</div>
-			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-	</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet2.png">
-			<div class="userlobbypoint">7</div>
-			<div class="usernumber-lobby" style="color: #1ceb1f;">
-				5 <i class="fa-solid fa-user" style="color: #1ceb1f;"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-		</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
-			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-		</div>
-
-		<div class="col-md-2 col-sm-4 col-6 mb-4 position-relative text-center">
-			<div class="lobbybetpoint position-relative d-inline-block">
-			<img src="assets/img/bet.png">
-			<div class="userlobbypoint">1</div>
-			<div class="usernumber-lobby">
-				5 <i class="fa-solid fa-user"></i>
-			</div>
-			<div class="buyinlobbybtn">
-				Buy-in
-			</div>
-			<div class="buyinpointlobby">1</div>
-		</div>
-		</div>
+		
 
 	</div>
-
 
 </div>
+</div>
 
-<div class="container-fluid d-flex justify-content-between position-fixed bottom-0 playerfixBtn align-items-center pb-2" style="z-index: 99;">
-	<div class="w-auto">
-		<p class="mb-0 text-uppercase">Live Players: <span>5</span></p>
+<div class="container-fluid playerfixBtn pb-3">
+	<div class="row align-items-center justify-content-center">
+	<div class="w-auto pe-5">
+		<p class="mb-0 text-uppercase">Live Tables: <span>40</span></p>
 	</div>
 	<div class="w-auto">
-		<button class="privatetable-btn">Private Table</button>
+		<p class="mb-0 text-uppercase">Live Players: <span>12</span></p>
 	</div>
-	<div class="w-auto">
-		<p class="mb-0 text-uppercase">Live Tables: <span>5</span></p>
-	</div>
-
+</div>
 </div>
 
 <!-- -----------------Menu------------------------- -->
 
       <div class="lobbyMenu position-fixed top-0">
-        <button class="btn text-uppercase landscape-block"><img class="profile-menu position-relative" src="assets/img/man.png"><span><span class="d-block w-100">Hi,</span>Shiveesinghal</span></button>
-        <button class="lobbyclose-btn" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+        <button class="btn text-uppercase landscape-block position-relative"><img class="profile-menu position-relative" src="assets/img/user-thumbnail.jpg"><span><span class="d-block w-100">Hey,</span>Mark Wood</span></button>
+        <!-- <button class="lobbyclose-btn" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button> -->
 
-        <ul class="pokerMenu-list">
-          <li class="d-block">
-            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-forward-step"></i> transaction</a>
+        <ul class="pokerMenu-list scroller">
+          <li class="d-block submenuList">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/wallet1.png" class="m-0"></i> My Wallet <i class="fa-solid fa-chevron-right submenuarrow"></i></a>
+            <ul class="pokermenu-submenu">
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/money1.png" class="m-0"></i> <p><span>Cash</span> <span>847.75</span></p></a>
+            	</li>
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/withdrawal.png" class="m-0"></i> <p><span>Withdraw</span> <span>19604.75</span></p></a>
+            	</li>
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/games.png" class="m-0"></i> <p><span>In-Game</span> <span>0.00</span></p></a>
+            	</li>
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/giftbox.png" class="m-0"></i> <p><span>Bonus</span> <span>0.00</span></p></a>
+            	</li>
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/book-club.png" class="m-0"></i> <p><span>Club</span> <span>bronze</span></p></a>
+            	</li>
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/star.png" class="m-0"></i> <p><span>Vip Points</span> <span>0</span></p></a>
+            	</li>
+
+            </ul>
           </li>
           <li class="d-block">
-            <a href="#" class="text-capitalize pokernav-item"><img src="assets/img/cash.png" width="24" />KYC</a>
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/deposithistiry.png" class="m-0" /></i>Deposit History</a>
           </li>
           <li class="d-block">
-            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-person-arrow-up-from-line"></i> Bank Details</a>
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/online-support.png" class="m-0" /></i>Help Support</a>
           </li>
           <li class="d-block">
-            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-person-arrow-up-from-line"></i> Deposit History </a>
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/money.png" class="m-0" /></i>Deposit</a>
           </li>
           <li class="d-block">
-            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-question"></i> My Transactions</a>
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/scroll.png" class="m-0" /></i>Game History</a>
           </li>
           <li class="d-block">
-            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-right-from-bracket"></i> My Invitations</a>
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/man.png" width="24" class="m-0" /></i>My Profile</a>
           </li>
           <li class="d-block">
-            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-right-from-bracket"></i> Player Invitations</a>
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/megaphone.png" class="m-0" /></i>Promotions</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/chat1.png" class="m-0" /></i>Message</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/shopping-cart.png" class="m-0" /></i>Shop</a>
           </li>
           <li class="d-block">
             <button class="text-uppercase logout-lobbybtn">LOgout</button>
@@ -392,36 +381,231 @@
 
       </div>
 
-<!-- -----------------Menu------------------------- -->
+<!-- -----------------Menu End!------------------------- -->
 
 
 </div>
 
 
+<!-- Modal -->
+<div class="modal fade lobbyModal" id="privatetableModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog me-1">
+    <div class="modal-content">
+      <div class="modal-header position-relative border-0">
+        <h5 class="modal-title w-100 p-0 text-center" id="exampleModalLabel">Create Private Table</h5>
+        <button type="button" class="btn-close position-absolute d-flex align-items-center justify-content-center" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="tableforModal mt-2">
+        	<div class="d-flex w-100 mb-4 justify-content-center align-items-center">
+        		<div class="tablefortext text-uppercase me-3">
+        			Table for
+        		</div>
+        		<div class="tableforradio">
+        			<input type="radio" id="table5" name="tablefor">
+        			<label for="table5">5</label>
+        			<input type="radio" id="table8" name="tablefor">
+        			<label class="ms-3" for="table8">8</label>
+        		</div>
+        	</div>
+        	<div class="row justify-content-between ps-3">
+        		<div class="col-5 mb-3">
+        			<div class="w-100">
+        				<label class="w-100 bootlabel">Boot</label>
+        				<input class="validmodalnumber" type="text" readonly value="15.00" name="">
+        			</div>
+        		</div>
+        		<div class="col-5 mb-3">
+        			<div class="w-100">
+        				<label class="w-100 bootlabel">Blind limit</label>
+        				<input class="validmodalnumber" type="text" readonly value="15.00" name="">
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="row justify-content-between ps-3">
+        		<div class="col-5 mb-3">
+        			<div class="w-100">
+        				<label class="w-100 bootlabel">Chal Limit</label>
+        				<input class="validmodalnumber" type="text" readonly value="15.00" name="">
+        			</div>
+        		</div>
+        		<div class="col-5 mb-3">
+        			<div class="w-100">
+        				<label class="w-100 bootlabel">Pot Limit</label>
+        				<input class="validmodalnumber" type="text" readonly value="15.00" name="">
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="row justify-content-between ps-3">
+        		<div class="col-5 mb-3">
+        			<div class="w-100">
+        				<label class="w-100 bootlabel">Valid For</label>
+        				<input class="validmodalnumber" type="text" readonly value="15.00" name="">
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="row justify-content-center">
+        		<button class="createTableBtn w-auto rounded" data-bs-toggle="modal" data-bs-target="#joinprivatetableModal"><span class="w-100 d-block">Create</span></button>
+        	</div>
+
+        	<div class="row justify-content-center mt-4">
+        		<p class="m-0 d-flex align-items-center justify-content-center" style="font-weight: 600;">Already Have a joining Code ?<button class="createTableBtn joinnowTableBtn w-auto rounded ms-1"><span class="w-100 d-block">Join Now</span></button></p>
+        	</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+<!-- ----------------------Exit Modal---------------------- -->
 
 
+<div class="modal fade lobbyModal" id="exitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header position-relative border-0">
+        <h5 class="modal-title w-100 p-0 text-center" id="exampleModalLabel">Exit</h5>
+        <button type="button" class="btn-close position-absolute d-flex align-items-center justify-content-center" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <h4 class="text-capitalize text-center my-4" style="font-size: 28px;"><b>Do you really want Exit</b></h4>
+        <div class="d-flex justify-content-center mb-3">
+        	<button class="createTableBtn joinnowTableBtn w-auto rounded me-3" style="min-width: 120px;"><span class="w-100 d-block">No</span></button>
+        	<button class="createTableBtn w-auto rounded" style="min-width: 120px;"><span class="w-100 d-block">Create</span></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ----------------------Exit Modal End!---------------------- -->
+
+<!-- ----------------------Exit Modal---------------------- -->
 
 
+<div class="modal fade lobbyModal" id="inviteEarnModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header position-relative border-0">
+        <h5 class="modal-title w-100 p-0 text-center" id="exampleModalLabel">Invite & Earn</h5>
+        <button type="button" class="btn-close position-absolute d-flex align-items-center justify-content-center" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body position-relative" style="padding-bottom: 38px;">
+      	<img src="assets/img/add-friend.png" class="m-auto d-block" />
+        <h4 class="text-capitalize text-center my-4" style="font-size: 28px;"><b>Invite your friends to join game, Your Referral Code:</b></h4>
+        <div class="d-flex justify-content-center mb-3">
+        	<p class="mb-0 referralCode">bkasdasd4821</p>
+        </div>
+        <button class="createTableBtn w-auto rounded position-absolute start-0 end-0 mx-auto" style="bottom: -22px;"><span class="w-100 d-block">Create</span></button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ----------------------Exit Modal End!---------------------- -->
+
+<!-- ----------------------Join Private Table---------------------- -->
+
+<div class="modal fade lobbyModal" id="joinprivatetableModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog me-1">
+    <div class="modal-content">
+      <div class="modal-header position-relative border-0">
+        <h5 class="modal-title w-100 p-0 text-center" id="exampleModalLabel">Invite & Earn</h5>
+        <button type="button" class="btn-close position-absolute d-flex align-items-center justify-content-center" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body position-relative" style="padding-bottom: 38px;">
+        <h4 class="text-capitalize text-center my-4" style="font-size: 28px;"><b>Insert Code</b></h4>
+        <div class="d-flex justify-content-center mb-3">
+        	<p class="mb-0 referralCode text-center" style="background:#3f212a;min-width: 140px;">56412221</p>
+        </div>
+        <div class="row justify-content-center mt-4 pt-3">
+        		<button class="createTableBtn w-auto rounded"><span class="w-100 d-block">Join & Play</span></button>
+        	</div>
+
+        	<div class="row justify-content-center mt-4 pt-3">
+        		<p class="m-0 d-flex align-items-center justify-content-center" style="font-weight: 600;">Already Have a joining Code ?<button class="createTableBtn joinnowTableBtn w-auto rounded ms-2" data-bs-toggle="modal" data-bs-target="#privatetableModal"><span class="w-100 d-block">Create New</span></button></p>
+        	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- privatetableModal----------------------Join Private Table---------------------- -->
+
+<!-- ----------------------Internet Disconnect Modal---------------------- -->
+
+
+<div class="modal fade lobbyModal" id="internetdisconnectModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header position-relative border-0">
+        <h5 class="modal-title w-100 p-0 text-center" id="exampleModalLabel">Internet Disconnect</h5>
+        <button type="button" class="btn-close position-absolute d-flex align-items-center justify-content-center" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body position-relative" style="padding-bottom: 38px;">
+      	<img src="assets/img/add-friend.png" class="m-auto d-block" />
+        <h4 class="text-capitalize text-center my-4" style="font-size: 28px;"><b>Internet Connection Failed!!</b></h4>
+        <button class="createTableBtn w-auto rounded position-absolute start-0 end-0 mx-auto" style="bottom: -22px;"><span class="w-100 d-block">Retry</span></button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ----------------------Internet Disconnect Modal End!---------------------- -->
 
 
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.min.js"></script>
 
 <script>
-	$(".lobbymenuBtn").click(function(){
+	 $(function() {
+  $(".lobbymenuBtn").on("click", function(e) {
+    $(".lobbyMenu").toggleClass("lobbyMenu-open");
+    e.stopPropagation()
+  });
+  $(document).on("click", function(e) {
+  	    var container = $(".lobbyMenu");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      $(".lobbyMenu").removeClass("lobbyMenu-open");
+    }
+  });
+});
+	/*$(".lobbymenuBtn").click(function(){
 	$(".lobbyMenu").toggleClass("lobbyMenu-open");
 	});
 	$(".lobbyclose-btn").click(function(){
 		$(".lobbyMenu").removeClass("lobbyMenu-open");
-	});
+	});*/
 	$(".settingsBtn").click(function(){
-	$(".settingpopup").toggleClass("settingpopup-open");
+	$(".settingpopup1").toggleClass("settingpopup-open");
 	});
+
+	$(".settingsBtn2").click(function(){
+	$(".settingpopup2").toggleClass("settingpopup-open");
+	});
+
 	$(".settingpopup button i").click(function(){
   $(".settingpopup").removeClass("settingpopup-open");
 });
+
+$('.submenuList').click(function(){
+  	$(this).toggleClass('lisubmenuactive');
+  });
+
+</script>
+
+<script>
+	 $('.teenpatti-lobby .settingpopup .pokernav-item i').click(function(){
+	 	$(this).toggleClass('active');
+	 });
 </script>
 
 </body>
