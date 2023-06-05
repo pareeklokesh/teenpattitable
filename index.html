@@ -29,37 +29,28 @@
 			<button class="btn btn-header settingsBtn">
 				<i class="fa-solid fa-gear"></i>
 			</button>
-			<div class="lobbyMenu settingpopup position-absolute top-0">
-        <button class="btn text-uppercase position-relative">Settings <i class="fa-solid fa-xmark"></i></button>
-        <ul class="pokerMenu-list">
-					<li class="d-block pokernav-item text-capitalize switchToggle">
-						<i class="fa-solid fa-microphone-slash"></i>
-						Disable All <input type="checkbox" id="switch" class="" name="">
-				    <label for="switch" class="value_add"></label>
-					</li>
-					<li class="d-block pokernav-item text-capitalize switchToggle">
-						<i class="fa-solid fa-music"></i>
-						Sound <input type="checkbox" id="muteChat" class="" name="">
-				    <label for="muteChat" class="value_add"></label>
-					</li>
-					<li class="d-block pokernav-item text-capitalize switchToggle">
-						<i class="fa-solid fa-microphone"></i>
-						Voice <input type="checkbox" id="autoMuck" class="" name="">
-				    <label for="autoMuck" class="value_add"></label>
-					</li>
-					<li class="d-block pokernav-item text-capitalize switchToggle">
-						<i class="fa-solid fa-music"></i>
-						Player Turn Sound <input type="checkbox" id="runitTwice" class="" name="">
-				    <label for="runitTwice" class="value_add"></label>
-					</li>
-					<li class="d-block pokernav-item text-capitalize switchToggle">
-						<i class="fa-solid fa-mobile"></i>
-						Vibrations <input type="checkbox" id="vibrations" class="" name="">
-				    <label for="vibrations" class="value_add"></label>
-					</li>
-				</ul>
-
+			
+			<div class="lobbyMenu settingpopup settingpopup1 position-absolute top-0">
+        <button class="btn text-capitalize position-relative text-center justify-content-center">Settings <i class="fa-solid fa-xmark"></i></button>
+        <ul class="pokerMenu-list pb-0">
+        	<li class="d-block pokernav-item text-capitalize d-flex align-items-center justify-content-between">
+            Disable All <i class="fa-solid fa-microphone"></i>
+          </li>
+          <li class="d-block pokernav-item text-capitalize d-flex align-items-center justify-content-between">
+            Sound <i class="fa-solid fa-volume-off"></i>
+          </li>
+          <li class="d-block pokernav-item text-capitalize d-flex align-items-center justify-content-between">
+            Voice <i class="fa-solid fa-microphone"></i>
+          </li>
+          <li class="d-block pokernav-item text-capitalize d-flex align-items-center justify-content-between">
+            Player Turn Sound <i class="fa-solid fa-music"></i>
+          </li>
+          <li class="d-block pokernav-item text-capitalize d-flex align-items-center justify-content-between">
+            Vibration <i class="fa-solid fa-mobile"></i>
+          </li>
+        </ul>
       </div>
+
 		</div>
 </div>
 </div>
@@ -631,35 +622,63 @@
 </div>
 <!-- -----------------Menu------------------------- -->
 
-      <div class="lobbyMenu position-fixed top-0">
-        <button class="btn text-uppercase menumodaltext landscape-block">
-        	<img src="assets/img/list.png">Menu
-        </button>
-        <button class="lobbyclose-btn" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="lobbyMenu lobbyMenumain position-fixed top-0">
+        <button class="btn text-uppercase landscape-block position-relative"><img class="profile-menu position-relative" src="assets/img/user-thumbnail.jpg"><span><span class="d-block w-100">Hey,</span>Mark Wood</span></button>
+        <!-- <button class="lobbyclose-btn" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button> -->
 
-        <ul class="pokerMenu-list landscape-block">
-					<li class="d-block">
-						<a href="#" class="text-uppercase pokernav-item"><i class="fa-solid fa-forward-step"></i> Resume</a>
+        <ul class="pokerMenu-list scroller">
+          <li class="d-block submenuList">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/wallet1.png" class="m-0"></i> My Wallet <i class="fa-solid fa-chevron-right submenuarrow"></i></a>
+            <ul class="pokermenu-submenu">
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/money1.png" class="m-0"></i> <p><span>Cash</span> <span>847.75</span></p></a>
+            	</li>
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/withdrawal.png" class="m-0"></i> <p><span>Withdraw</span> <span>19604.75</span></p></a>
+            	</li>
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/games.png" class="m-0"></i> <p><span>In-Game</span> <span>0.00</span></p></a>
+            	</li>
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/giftbox.png" class="m-0"></i> <p><span>Bonus</span> <span>0.00</span></p></a>
+            	</li>
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/book-club.png" class="m-0"></i> <p><span>Club</span> <span>bronze</span></p></a>
+            	</li>
+            	<li class="d-block position-relative">
+            		<a href="#" class="text-capitalize pokernav-item d-flex align-items-center position-relative"><i><img src="assets/img/star.png" class="m-0"></i> <p><span>Vip Points</span> <span>0</span></p></a>
+            	</li>
+
+            </ul>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/deposithistiry.png" class="m-0" /></i>Deposit History</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/online-support.png" class="m-0" /></i>Help Support</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/money.png" class="m-0" /></i>Deposit</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/scroll.png" class="m-0" /></i>Game History</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/man.png" width="24" class="m-0" /></i>My Profile</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/megaphone.png" class="m-0" /></i>Promotions</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/chat1.png" class="m-0" /></i>Message</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i><img src="assets/img/shopping-cart.png" class="m-0" /></i>Shop</a>
+          </li>
+          <li class="d-block">
+						<a href="#" class="text-capitalize pokernav-item d-flex align-items-center"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 					</li>
-					<li class="d-block">
-						<a href="#" class="text-uppercase pokernav-item"><img src="assets/img/cash.png" width="24">Top up</a>
-					</li>
-					<li class="d-block">
-						<a href="#" class="text-uppercase pokernav-item"><img src="assets/img/switch.png"> Switch Table <span class="upcoming-text">Upcoming</span></a>
-					</li>
-					<li class="d-block">
-						<a href="#" class="text-uppercase pokernav-item"><i class="fa-solid fa-person-arrow-up-from-line"></i> Stand up <span class="upcoming-text">Upcoming</span></a>
-					</li>
-					<li class="d-block">
-						<a href="#" class="text-uppercase pokernav-item"><i class="fa-solid fa-person-arrow-up-from-line"></i> Sit out <span class="upcoming-text">Upcoming</span></a>
-					</li>
-					<li class="d-block">
-						<a href="#" class="text-uppercase pokernav-item"><i class="fa-solid fa-question"></i> How to play <span class="upcoming-text">Upcoming</span></a>
-					</li>
-					<li class="d-block">
-						<a href="#" class="text-uppercase pokernav-item"><i class="fa-solid fa-right-from-bracket"></i> Exit</a>
-					</li>
-				</ul>
+        </ul>
 
       </div>
 
@@ -669,18 +688,33 @@
 <script src="assets/js/jquery.min.js"></script>
 
 <script>
-	$(".lobbymenuBtn").click(function(){
-	$(".lobbyMenu").toggleClass("lobbyMenu-open");
-	});
-	$(".lobbyclose-btn").click(function(){
-		$(".lobbyMenu").removeClass("lobbyMenu-open");
-	});
+	$(function() {
+  $(".lobbymenuBtn").on("click", function(e) {
+    $(".lobbyMenu").toggleClass("lobbyMenu-open");
+    e.stopPropagation()
+  });
+  $(document).on("click", function(e) {
+  	    var container = $(".lobbyMenu");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      $(".lobbyMenu").removeClass("lobbyMenu-open");
+    }
+  });
+});
+
 	$(".settingsBtn").click(function(){
 	$(".settingpopup").toggleClass("settingpopup-open");
 	});
 	$(".settingpopup button i").click(function(){
   $(".settingpopup").removeClass("settingpopup-open");
 });
+	$('.submenuList').click(function(){
+  	$(this).toggleClass('lisubmenuactive');
+  });
+</script>
+<script>
+	 $('.settingpopup .pokernav-item i').click(function(){
+	 	$(this).toggleClass('active');
+	 });
 </script>
 
 </body>

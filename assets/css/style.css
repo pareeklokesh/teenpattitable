@@ -110,9 +110,9 @@ a {
   background: #0a0102;
   width: 100%;
   text-align: center;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 500;
-  padding: 15px 5px;
+  padding: 5px 5px;
   border-radius: 12px;
   box-shadow: 0px 0px 10px #3e2e30;
   padding-left: 45px;
@@ -319,11 +319,11 @@ a {
   background: linear-gradient(#0049ae,#002957);
   border: 3px solid #8b8c9a;
   border-radius: 6px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   padding: 6px 15px;
   box-shadow: 0 0 9px #4981da;
-  min-height: 69px;
+  min-height: 65px;
 }
 .pack-btn span {
   font-size: 14px;
@@ -452,7 +452,10 @@ border: 1px solid #bcaf61 !important;
   top: 15px !important;
 }
 .lobbyMenu {
-  width: 290px !important;
+  width: 220px !important;
+}
+.lobbyMenumain {
+  width: 270px !important;
 }
 .lobbyMenu::before, .lobbyModal .modal-content::before {
   content: "";
@@ -515,7 +518,7 @@ border: 1px solid #bcaf61 !important;
 .pokernav-item {
   display: block;
   color: #fff;
-  font-size: 18px;
+  font-size: 14px;
   border-bottom: 1.9px solid #dcbd7d;
   padding: 8px 30px;
   transition: all .4s linear;
@@ -524,7 +527,6 @@ border: 1px solid #bcaf61 !important;
 }
 .pokernav-item img, .pokernav-item i {
   margin-right: 20px;
-  min-width: 24px;
 }
 .lobbyMenu .logout-lobbybtn {
   background: linear-gradient(#a91a27, #710e15);
@@ -583,7 +585,7 @@ border: 1px solid #bcaf61 !important;
 .settingpopup button, .lobbyMenu button.menumodaltext {
   padding: 4px 10px;
   padding-right: 35px;
-  font-size: 28px !important;
+  font-size: 22px !important;
   text-transform: uppercase !important;
 }
 .settingpopup button i {
@@ -659,6 +661,12 @@ border: 1px solid #bcaf61 !important;
 .setting-modal .modal-header .btn-header i {
   color: #fff;
 }
+.chatModal-div .modal-dialog {
+  transform: translateY(330%) !important;
+}
+.chatModal-div.show .modal-dialog {
+  transform: translateY(0) !important;
+}
 
 
 
@@ -678,7 +686,7 @@ border: 1px solid #bcaf61 !important;
 
 @media (min-width: 767px) {
   .teenpattitable-container {
-  margin-top: -120px;
+  margin-top: -88px;
 }
 
 }
@@ -782,8 +790,8 @@ body.teenpatti-lobby {
   font-weight: 600;
 }
 .tipdealerimg {
-  width: 100px;
-  top: 8%;
+  width: 142px;
+  top: 3%;
   left: 3%;
   right: 0;
   margin: 0px auto;
@@ -791,7 +799,7 @@ body.teenpatti-lobby {
 .teenpattigamecoin {
   left: 18px;
   top: 5px;
-  width: 85px;
+  width: 60px;
 }
 .revolvingjoker {
   margin: 0;
@@ -811,21 +819,21 @@ body.teenpatti-lobby {
   width: 100%;
   max-width: 100%;
 }
-.teenpatti-lobby .lobbyMenu button img.profile-menu {
+.lobbyMenu button img.profile-menu {
   width: 80px;
   background: #301316;
   box-shadow: 0 0 6px #301316;
   border-radius: 6px;
 }
-.teenpatti-lobby .lobbyMenu button span {
+.lobbyMenu button span {
   font-weight: 800;
   font-size: 16px;
 }
-.teenpatti-lobby .lobbyMenu button {
+.lobbyMenu button {
   padding-bottom: 15px;
   padding-top: 15px;
 }
-.teenpatti-lobby .lobbyMenu button::before, .lobbyModal .modal-header::before {
+.lobbyMenu button::before, .lobbyModal .modal-header::before {
   content: "";
   display: block;
   width: 100%;
@@ -835,17 +843,18 @@ body.teenpatti-lobby {
   bottom: 0;
   background: linear-gradient(to left, transparent 10%, #dbb71e, transparent 90%);
 }
-.teenpatti-lobby .pokernav-item i {
-  width: 50px;
-  height: 50px;
+.pokernav-item i {
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 8px #472c39;
   margin-right: 10px;
+  padding: 6px;
 }
-.teenpatti-lobby  .pokernav-item {
+.pokernav-item {
   font-weight: 600;
   border: 0;
   padding-left: 0;
@@ -853,7 +862,7 @@ body.teenpatti-lobby {
   background: transparent;
   color: #fff;
 }
-.submenuarrow, .teenpatti-lobby .pokernav-item i.submenuarrow {
+.submenuarrow, .pokernav-item i.submenuarrow {
   background: linear-gradient(#ede820, #8a6c02);
   font-size: 16px;
   width: 25px;
@@ -871,7 +880,7 @@ body.teenpatti-lobby {
   border: 1px solid #341211;
   border-radius: 10px;
 }
-.teenpatti-lobby li {
+.pokerMenu-list li {
   padding: 0 15px;
 }
 .pokermenu-submenu li p {
@@ -883,11 +892,11 @@ body.teenpatti-lobby {
   float: right;
   color: #ffe500;
 }
-.teenpatti-lobby .pokermenu-submenu .pokernav-item i {
-  width: 40px;
-  height: 40px;
+.pokermenu-submenu .pokernav-item i {
+  width: 35px;
+  height: 35px;
 }
-.teenpatti-lobby .pokerMenu-list .pokermenu-submenu li::before {
+.pokerMenu-list .pokermenu-submenu li::before {
   content: "";
   display: block;
   width: 100%;
@@ -898,7 +907,7 @@ body.teenpatti-lobby {
   right: 0;
   background: linear-gradient(to left, transparent 10%, #dbb71e, transparent 90%);
 }
-.teenpatti-lobby .pokerMenu-list .pokermenu-submenu li:last-child::before {
+.pokerMenu-list .pokermenu-submenu li:last-child::before {
   display: none;
 }
 .pokermenu-submenu {
@@ -914,12 +923,12 @@ body.teenpatti-lobby {
 .submenuarrow, .teenpatti-lobby .lisubmenuactive .pokernav-item i.submenuarrow, .lisubmenuactive a .submenuarrow {
   transform: rotate(-90deg);
 }
-.teenpatti-lobby .pokerMenu-list {
+.pokerMenu-list {
   overflow: auto;
   height: 100%;
   padding-bottom: 150px;
 }
-.teenpatti-lobby .lobbyMenu {
+.lobbyMenu {
   height: 100vh;
 }
 .teenpatti-lobby .lobbyMenu button.logout-lobbybtn {
@@ -940,11 +949,11 @@ body.teenpatti-lobby {
   scrollbar-color: #fff #1c0210;
   scrollbar-width: thin;
 }
-.teenpatti-lobby .settingpopup {
+.settingpopup {
   height: auto;
   right: 10px;
 }
-.teenpatti-lobby .settingpopup .pokernav-item i {
+.settingpopup .pokernav-item i {
   background: #a59d04;
   color: #fff;
   font-size: 18px;
@@ -953,14 +962,14 @@ body.teenpatti-lobby {
   margin-right: 0;
   position: relative;
 }
-.teenpatti-lobby .settingpopup .pokernav-item {
+.settingpopup .pokernav-item {
   padding: 6px 12px;
-  font-size: 18px;
+  font-size: 14px;
 }
-.teenpatti-lobby .settingpopup .pokernav-item i.active {
+.settingpopup .pokernav-item i.active {
   background: #ff0000;
 }
-.teenpatti-lobby .settingpopup .pokernav-item i.active::after {
+.settingpopup .pokernav-item i.active::after {
   content: "";
   display: block;
   width: 90%;
@@ -973,11 +982,11 @@ body.teenpatti-lobby {
   right: 0;
   margin: 0px auto;
 }
-.teenpatti-lobby .settingpopup button {
+.settingpopup button {
   padding: 5px 0;
   font-weight: 700;
 }
-.teenpatti-lobby .settingpopup button i, .lobbyModal .modal-header .btn-close {
+.settingpopup button i, .lobbyModal .modal-header .btn-close {
   background: #f30000;
   width: 28px;
   height: 28px;
@@ -988,7 +997,7 @@ body.teenpatti-lobby {
   left: 5px;
   top: 5px;
 }
-.teenpatti-lobby .settingpopup .pokerMenu-list {
+.settingpopup .pokerMenu-list {
   padding-bottom: 8px !important;
 }
 .lobbyModal .modal-content {
@@ -1174,9 +1183,7 @@ input:checked + .radiolabelall::after {
   color: #4e300f;
   font-size: 22px;
 }
-.teenpattiTablebody .menumodaltext img {
-  width: 32px;
-}
+
 .slide-control {
   background: #4e300f;
   width: 25px;
