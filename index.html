@@ -122,8 +122,8 @@
 
 <div class="container-fluid">
 	<div class="container">
-		<div class="row align-items-center packblindiv">
-			<div class="col-4 bootpoint position-relative d-none" style="border-radius: 15px 0 0 15px;">
+		<div class="row align-items-center packblindiv px-5">
+			<div class="col-4 bootpoint position-relative noneboot" style="border-radius: 15px 0 0 15px;">
 				<ul>
 					<li>
 						<strong class="text-capitalize float-start">Boot</strong>
@@ -135,16 +135,16 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-4 d-flex justify-content-center ps-5">
+			<div class="col-4 d-flex justify-content-center ps-5 packblock">
 				<button class="pack-btn text-center">Pack</button>
 			</div>
-			<div class="col-4 bootpoint position-relative">
+			<div class="col-4 bootpoint position-relative d-flex align-items-center">
 				<div class="d-flex w-100">
 					<img src="assets/img/teenpattigamecoin.png" class="position-absolute teenpattigamecoin" />
 					<p class="mb-0 bootpointtext">4939.54</p>
 				</div>
 			</div>
-			<div class="col-4 bootpoint position-relative d-none" style="border-radius: 0px 15px 15px 0px;">
+			<div class="col-4 bootpoint position-relative noneboot" style="border-radius: 0px 15px 15px 0px;">
 				<ul>
 					<li>
 						<strong class="text-capitalize float-start">Boot</strong>
@@ -156,7 +156,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-4">
+			<div class="col-4 packblock">
 				<div class="d-flex align-items-center">
 				<button class="btn plush-btn" style="opacity: 0.5;">-</button>
 				<button class="pack-btn text-center mx-4">Blind<span class="d-block text-center">1</span></button>
@@ -169,7 +169,7 @@
 
 
 <div class="chat-fix position-fixed">
-	<button class="btn btn-header" data-bs-toggle="modal" data-bs-target="#chatModal">
+	<button class="btn btn-header p-0" data-bs-toggle="modal" data-bs-target="#chatModal">
 				<img src="assets/img/chat.png" />
 			</button>
 </div>
@@ -686,6 +686,13 @@
 	 $('.settingpopup .pokernav-item i').click(function(){
 	 	$(this).toggleClass('active');
 	 });
+
+	 $('.fixpoint').click(function(){
+	 	$('.packblindiv').removeClass('packblindiv align-items-center');
+	 	$('.noneboot').show();
+	 	$('.packblock').addClass('packblock-none');
+	 });
+
 </script>
 
 </body>

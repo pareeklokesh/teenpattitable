@@ -132,7 +132,7 @@ a {
   display: none;
 }
 .chat-fix {
-  bottom: 15px;
+  bottom: 18px;
   left: 15px;
 }
 .teenpattiuser {
@@ -540,15 +540,12 @@ border: 1px solid #bcaf61 !important;
   text-transform: uppercase !important;
   padding: 5px 15px;
 }
-.pokernav-item:hover {
-  background: #dcbd7d;
-  color: #1a0a0b;
+.pokernav-item:hover{
+  color: #fff;
+  background: #000;
 }
-.pokernav-item:hover i {
-  color: #1a0a0b;
-}
-.pokernav-item:hover .upcoming-text {
-  color: #1a0a0b;
+.pokernav-item:hover i, .pokernav-item:hover .upcoming-text {
+  color: #fff;
 }
 
 /* -------------------Menu Css End!------------------- */
@@ -630,7 +627,7 @@ border: 1px solid #bcaf61 !important;
   display: block;
   text-align: right;
   text-transform: capitalize;
-  margin-top: -3px;
+  margin-top: -8px;
 }
 .offcanvasAll {
   background: #1a0a0b;
@@ -797,9 +794,16 @@ body.teenpatti-lobby {
   margin: 0px auto;
 }
 .teenpattigamecoin {
-  left: 18px;
+  width: 60px;left: 18px;
+}
+.packblindiv .teenpattigamecoin {
   top: 5px;
-  width: 60px;
+}
+.teenpattigamecoin {
+  top: 20%;
+}
+.packblindiv {
+  padding: 0px !important;
 }
 .revolvingjoker {
   margin: 0;
@@ -869,19 +873,19 @@ body.teenpatti-lobby {
   height: 25px;
   transform: rotate(90deg);
   position: absolute;
-  right: 0px;
+  right: 15px;
   margin: 0;
   color: #fff;
 }
 .pokermenu-submenu {
   background: #301316;
-  width: 100%;
+  width: 90%;
   margin: 0px auto;
   border: 1px solid #341211;
   border-radius: 10px;
 }
-.pokerMenu-list li {
-  padding: 0 15px;
+.pokerMenu-list li a {
+  padding: 8px 15px;
 }
 .pokermenu-submenu li p {
   margin: 0;
@@ -1249,6 +1253,16 @@ display: inline-block;
   margin-top: -4px;
   padding-bottom: 3px;
 }
+.lobbybetpoint {
+  top: -15px;
+}
+ 
+.noneboot {
+  display: none;
+}
+.packblock-none {
+  display: none !important;
+}
 
 
 
@@ -1295,7 +1309,8 @@ display: inline-block;
   width: 69px !important;
   height: 69px !important;
   left: -16px;
-} 
+}
+
 
 
 }
