@@ -541,11 +541,20 @@ border: 1px solid #bcaf61 !important;
   padding: 5px 15px;
 }
 .pokernav-item:hover{
-  color: #fff;
-  background: #000;
+  color: #1c0210;
+background: #dcbd7d;
 }
-.pokernav-item:hover i, .pokernav-item:hover .upcoming-text {
+.pokernav-item:hover span, .pokermenu-submenu li .pokernav-item:hover p span:last-child {
+  color: #1c0210;
+}
+.pokernav-item:hover i {
   color: #fff;
+}
+.pokernav-item:hover .upcoming-text {
+  color: #1c0210;
+}
+.pokernav-item:hover i {
+  background: #1c0210;
 }
 
 /* -------------------Menu Css End!------------------- */
