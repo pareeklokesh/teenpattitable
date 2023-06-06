@@ -503,8 +503,8 @@ border: 1px solid #bcaf61 !important;
 .lobbyMenu .lobbyclose-btn {
   border: 0 !important;
   background: #f40403;
-  width: 32px !important;
-  height: 32px !important;
+  width: 25px !important;
+  height: 25px !important;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -1270,6 +1270,9 @@ display: inline-block;
   display: none;
 }
 .packblock-none {
+  display: none !important;
+}
+.lobbyclose-btn::before {
   display: none !important;
 }
 
